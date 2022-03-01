@@ -1,2 +1,2 @@
 # AraAphidGWAS
-Source code for GWAS of aphid numbers on Arabidopsis thaliana
+Source code for GWAS of aphid numbers on *Arabidopsis thaliana*  
