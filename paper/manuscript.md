@@ -70,7 +70,7 @@ Please describe
 
 
 ## Field GWAS of the aphid abundance (*Yasu will fill in this section*)  
-Bolting:  pseudo h^2^ = near to 1.0; log_BbLe_max: pseudo h^2^ = 0.7; log_BbLe_sum: pseudo h^2^ = 0.71.  
+Bolting:  pseudo h^2^ = near to 1.0; log_BbLe_max: pseudo h^2^ = 0.7; log_BbLe_sum: pseudo h^2^ = 0.71. We found a significant peak for the aphid abundance (Fig. [1](#fig:ManPlot){reference-type="ref"}).   
 
 
 ## Mutant analysis in a laboratory (*Please fill in this section*)
@@ -86,19 +86,10 @@ possible topics
 - caveats on other candidates near the GWAS peak  
 - summary or concluding paragraph  
 
-<!---
 
-### Figure presentation (subsubsection)
-We added trend lines to the bi-plots following the linear regression model:
-$$y = a + bx$$
-, where $y$ is the response variable; $x$ is the explanatory variable; $a$ indicates the intercept; $b$ represents the regression slope. Because a log link function was used in the Poisson GLM, a regression curve was given by $y = e^{(a + bx)}$ for the number of seeds.  
+# Tables & Figures 
 
-
-The dry weight and the number of seeds both showed positive relationships with the plant height ($p<0.05$: Fig. [1](#fig:biplot){reference-type="ref"
-reference="fig:biplot"}).  
-
-![Figure 1. Dependency of the dry weight (right) or the number of seeds (right) on the plant height](url){#fig:biplot}  
---->
+![Figure 1. GWAS Manhattan plot of the aphid abundance. Horizontal dashed line indicates the genome-wide Bonferroni threshold at $p=0.05$](../figures/log_BbLe_max_Man.png){#fig:ManPlot}  
 
 
 # References
