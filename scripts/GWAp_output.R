@@ -1,3 +1,7 @@
+# check phenotypes
+pheno = read.csv("./data/20220301_AtZurich2018aphidsGWAp.csv",header=TRUE)
+aggregate(log_BbLe_max~Bolting,data=pheno,median)
+wilcox.test(log_BbLe_max~Bolting,data=pheno)
 
 # load output of GWA-portal
 out = read.csv("../data/log_BbLe_max_23338_pvals.csv.gz",header=TRUE)
