@@ -97,7 +97,7 @@ possible topics
 
 # Tables & Figures 
 
-![Figure 1. GWAS of the aphid abundance on 196 *A. thaliana* accessions grown in the field. Manhattan plot shows the associaiton score of -log10($p$) against five choromosomes of *A. thaliana* at MAF cut-off = 0.025, where a horizontal dashed line indicates the genome-wide Bonferroni threshold at $p=0.05$. QQ-plot shows relationships between the observed and expected -log10($p$) values, where a solid line indicates randomly expected -log10($p$) and the shaded area corresponds to its 95\% confidence intervals. The upper inset focuses on the top-scroing SNP at Chr3-4579292, and desplays the position of candidate genes (left) or compares phenotype values i.e., log(no. of aphids + 1) between the two SNP alleles (right). ](../figures/database_snapshot/Slide5.png){#fig:ManPlot}  
+![Figure 1. GWAS of the aphid abundance on 196 *A. thaliana* accessions grown in the field. Manhattan plot shows the associaiton score of -log10($p$) against five choromosomes of *A. thaliana* at MAF cut-off = 0.025, where a horizontal dashed line indicates the genome-wide Bonferroni threshold at $p=0.05$. QQ-plot shows relationships between the observed and expected -log10($p$) values, where a solid line indicates randomly expected -log10($p$) and the shaded area corresponds to its 95\% confidence intervals. The upper inset focuses on the top-scroing SNP at Chr3-4579292, and desplays the position of candidate genes (left) or compares phenotype values i.e., log(no. of aphids + 1) between the two SNP alleles (right).](../figures/database_snapshot/Slide5.png){#fig:ManPlot}  
 
 # Supplementary Materials 
 
