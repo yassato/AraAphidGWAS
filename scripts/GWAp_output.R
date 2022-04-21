@@ -105,7 +105,7 @@ stuff$uniqueness <- as.numeric( as.character(stuff$uniqueness) );
 stuff$dispensability <- as.numeric( as.character(stuff$dispensability) );
 
 # by default, outputs to a PDF file
-pdf( file="./figures/revigo_treemap.pdf", width=12, height=6) # width and height are in inches
+pdf(file="./figures/revigo_treemap.pdf", width=12, height=6) # width and height are in inches
 
 # check the tmPlot command documentation for all possible parameters - there are a lot more
 treemap(
