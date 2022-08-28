@@ -82,13 +82,6 @@ The genome-wide significance level was given at $p=0.05$ with Bonferroni correct
 The number of aphids was log($x+1$)-transformed to improve normality. 
 Input phenotype data are available as a supplementary material. After the association mapping, candidate genes were searched within ca. 10 kb near a focal SNP.  
 
-[To estimate gene functions associated with aphid abundance, we conducted gene ontology (GO) enrichment analysis for the output of GWA-portal.
-To deal with statistical non-independence of SNPs, we employed an unbiased GO analysis implemented in the Gowinda program [@kofler2012gowinda]. 
-The cut-off value of minor allele frequency (MAF) was set at 0.025 for the entire SNP set, leaving 2,500,979 SNPs in total. SNPs having the top 1\% value of -log$_10$($p$) were tested against the entire set. 
-The latest gene feature format (GFF) and GO slim annotation of *A. thaliana* were obtained from The Arabidopsis Information Resource (TAIR) (https://www.arabidopsis.org/). 
-The Gowinda program was run with the key arguments of --simulations 1000000 --min-significance 1 --gene-definition updownstream1000 --mode gene --min-genes 2.]{.deletion author="Y. Sato" date="28-Aug-2022"}
-
-
 ## Mutant analysis  
 
 ### *Arabidopsis thaliana* mutants
@@ -121,34 +114,34 @@ We did not count aphids that escaped outside the area of a plant.
 ### Data analysis  
 
 We used generalized linear models (GLM) to test phenotypic differences between each mutant and the Col-0 wild type.
-Multiple comparisons were corrected using the Bonferroni method. 
 The plant size and flowering time were analyzed using GLMs with Gaussian distribution, which were equivalent to standard linear models. 
 The number of aphids i.e., the count response was analyzed using GLMs with Poisson error structure and a log link function. 
-Wald-tests were used to calculate $p$-values from GLMs.
-
+Wald-tests were used to calculate $p$-values from GLMs. 
+Multiple comparisons were corrected using the Bonferroni method. 
+The failure of aphid colonization at the initial stage amplified over-dispersion of the aphid number at later time points, but negative binomial GLMs could not be converged in some pairs due to small sample size. 
+We therefore applied Poisson GLMs for the modest dispersion 7-days after the release (Fig. [2](#fig:mutant){reference-type="ref"}D), while the results of later time points were provided as supplementary information (Fig [S3](#fig:aphid_stat){reference-type="ref"}).  
 
 # Results 
 
 ## Field GWAS of the aphid abundance   
 
-To monitor aphid abundance and visible plant traits, we transplanted 196 *A. thaliana* accessions in the field. 
-The two species of specialist aphids, *Lipaphis erysimi* and *Brevicoryne brassicae*, mainly occurred on *A. thaliana*. 
+To monitor aphid abundance as well as visible plant traits, we transplanted 196 *A. thaliana* accessions in the field. 
 Starting from vegetative phase, 38\% of individual plants initiated bolting two weeks after the transplant. 
+The two species of specialist aphids, *Lipaphis erysimi* and *Brevicoryne brassicae*, mainly occurred on *A. thaliana*. 
 The total number of aphid individuals throughout the season was more abundant on bolted accessions than on non-bolted accessions (non-bolted and bolted plants = 0 and 7 aphids in median, respectively; Mann-Whitney's $U$-test, $U = 124158, p < 10^{-15}$), indicating that the presence of flowering stem was significantly associated with the aphid abundance. 
 In addition, we also distinguished the abundance of winged and wingless aphids in order to infer ecological processes behind the aphid colonization on *A. thaliana*. 
-Winged and wingless aphids initially colonized vegetative plants three days after the transplant, but many of these aphids did not establish a colony in subsequent monitoring (the days between 07 and 10 July 2018: Fig. S1). 
+Winged and wingless aphids initially colonized vegetative plants three days after the transplant, but many of these aphids did not establish a colony in subsequent monitoring (the days between 07 and 10 July 2018: Fig. [S1](#fig:aphid_day){reference-type="ref"}). 
 This additional observation suggests that colonized aphids do not always establish a colony and thereby success of the colony establishment also depends on the host suitability after colonization.    
 
 The total number of aphids had high heritability among the plant accessions ($h^2 = 0.7$), indicating that this trait was likely under genetic control and thus deserved further GWAS analyses.
 To detect SNPs strongly associated with the aphid number, we then performed GWAS using the accelerated mixed model. 
-Regarding the aphid number, we detected a significant SNP above the genome-wide Bonferroni threshold (chr3-4579292, $p<10^{-8}$,  MAF=0.026: Fig. [1](#fig:ManPlot){reference-type="ref"}) in an intergenic region.
-When comparing trait values between two alleles on the significant SNP marker, three of five accessions shared similar haplotypes from AT3G13870 to AT3G13890 locus (Fig. [S1](#fig:1001browser){reference-type="ref"}), spanning within a 10-kb kbp region. 
+Regarding the aphid number, we detected a significant SNP in an intergenic region above the genome-wide Bonferroni threshold (chr3-4579292, $p<10^{-8}$,  MAF=0.026: Fig. [1](#fig:ManPlot){reference-type="ref"}A,B).
+This significant SNP also had a far stronger score than randomly expected (Fig. [1](#fig:ManPlot){reference-type="ref"}C). 
+When comparing the aphid number between two alleles on the significant SNP, three of five accessions shared similar haplotypes spanning within a 10-kb kbp region from AT3G13870 to AT3G13890 locus (Fig. [S2](#fig:1001browser){reference-type="ref"}). 
 Two growth-related genes were located near this genomic region: AT3G13870 locus, also known as *ROOT HAIR DEFECTIVE3* (*RHD3*), is known to regulate root hair developments [@schiefelbein1990genetic] and thereby results in delayed growth [@zhang2013root]. 
 AT3G13880 (*OTP72*) locus itself has no visible phenotype, but one allele *otp72-2* is known to affect gene the expression level of *RHD3* [@chateigner2013domainsz]. 
 In addition, AT3G13890 locus is known to encode MYB26 transcription factor responsible for the anther dehiscence and male sterility [@mitsuda2006efficient]. 
-Known functions of these candidate genes led us to further hypothesize that genes involved in growth or reproduction have significant side effects on aphid colonization on a plant stem.  
-
-[To estimate known gene functions associated with the aphid numbers, we also performed GO enrichment analysis for SNPs having the top 1% score of -log$_10$($p$). We detected two significant GOs, "DNA-binding transcription factor activity" and "positive regulation of transcription, DNA-templated" (FDR-adjusted $p<0.05$). Although the other GOs were not significant after the FDR correction, the top 22 categories included GOs involving defense, growth, and reproduction, such as "positive regulation of salicylic acid mediated signaling pathway", "positive regulation of leaf senescence", "pollen tube development" (non-adjusted $p<0.01$: Fig. [S2](#fig:gomap){reference-type="ref"}). The results of GO enrichment analysis support the relevance of plant life-history traits as well as defense signaling to the aphid numbers.]{.deletion author="Y. Sato" date="28-Aug-2022"}
+Known functions of these candidate genes led us to further hypothesize that genes involved in growth or reproduction exert side effects on the establishment of aphid colony.  
 
 ## Mutant growth and aphid colonization in the laboratory  
 
@@ -157,12 +150,14 @@ We therefore cultivated single-gene mutants of these three genes to examine thei
 After 20 days of growth period, the rosette size of the AT3G13882 mutant became 3.29 cm on average, which was significantly smaller than wild type plants having 5.38 cm on average (adjusted $p<0.001$ by Gaussian GLMs: Fig [2](#fig:mutant){reference-type="ref"}A,B). 
 The other two mutant plants were slightly larger than the wild type (6.29 cm and 6.3 cm for *EPFL2* and *MYB26*, respectively), where the *EPFL3* mutant had a significantly larger size than the wild type (adjusted $p<0.01$: Fig [2](#fig:mutant){reference-type="ref"}A,B). 
 Consistent with these differences of the initial size, the AT3G13882 mutant took 38.8 days on average until flowering, which was significantly longer than 30.8 days to flowering for the wild type (adjusted $p<0.001$: Fig [2](#fig:mutant){reference-type="ref"}A,C). 
-Corresponding to the larger initial size than the wild type, the *EPFL3* and *MYB26* mutants showed earlier flowering than the wild type plants (27.5 days and 23.57 days for *EPFL3* and *MYB26*, respectively: adjusted $p<0.01$: Fig. [2](#fig:mutant){reference-type="ref"}D).  
+Corresponding to the larger initial size than the wild type, the *EPFL3* and *MYB26* mutants showed earlier flowering than the wild type plants (27.5 days and 23.57 days for *EPFL3* and *MYB26*, respectively: adjusted $p<0.01$: Fig. [2](#fig:mutant){reference-type="ref"}C).
+These results show that the mutant plants exhibit slower or faster life-cycle than a wild type.
 
-The growth difference among the three mutants finally led us to test whether delayed growth could prevent the establishment of aphid colony after colonization. 
+The growth difference among the three mutants finally led us to test whether delayed or early growth could prevent the establishment of aphid colony after colonization. 
 To examine the establishment process after colonization, we released wingless individuals of *Lipaphis erysimi* on the mutant lines besides the wild type of _A. thaliana_. 
-One week after the release, aphids were more likely to failed colonizing the AT3G13882 mutant than on the wild type (adjusted $p<0.001$ by Poisson GLMs), while *EPFL3* and *MYB26* mutants hosted similar or larger numbers of aphids comparing to wild type plants (Fig [2](#fig:mutant){reference-type="ref"}D). 
-The failure of colony establishments during the former period led to the same patterns until 14 days after the release (Fig [S3](#fig:aphid_stat){reference-type="ref"}), though the levels of statistical significance became larger near the end of experiment likely because over-dispersion of the aphid numbers became severe.  
+One week after the release, aphids were more likely to failed colonizing the AT3G13882 mutant than on the wild type (adjusted $p<0.001$ by Poisson GLMs; Fig [2](#fig:mutant){reference-type="ref"}D), showing adversarial effects of delayed growth on the aphid colony establishment. 
+In addition, *EPFL3* and *MYB26* mutants hosted similar or larger numbers of aphids comparing to wild type plants (Fig [2](#fig:mutant){reference-type="ref"}D). 
+The failure of colony establishments during the former period led to the same patterns until 14 days after the release (Fig [S3](#fig:aphid_stat){reference-type="ref"}).  
 
 # Discussion
 
@@ -200,18 +195,18 @@ The authors declare no conflicts of interests concerning this study.
 
 # Tables & Figures 
 
-![Figure 1. GWAS of the aphid abundance on 196 *A. thaliana* accessions grown in the field. Manhattan plot (b) shows the associaiton score of -log$_10$($p$) against five choromosomes of *A. thaliana* at MAF cut-off = 0.025, where a horizontal dashed line indicates the genome-wide Bonferroni threshold at $p=0.05$. QQ-plot (c) shows relationships between the observed and expected -log$_10$($p$) values. A solid line indicates randomly expected -log$_10$($p$) and the shaded area corresponds to its 95\% confidence intervals. The upper panel (a) focuses on the top-scoring SNP at Chr3-4579292 and desplays the position of candidate genes.](../figures/fig1_comb.png){#fig:ManPlot}  
+![Figure 1. GWAS of the aphid abundance on 196 *A. thaliana* accessions grown in the field. (A) A genomic region near the top-scoring SNP at Chr3-4579292 desplays the position of candidate genes. Red colors highlight genes analyzed in Figure [2](#fig:mutant){reference-type="ref"}. (B) Manhattan plot shows the association score of -log$_10$($p$) across five chromosomes of *A. thaliana* with MAF cut-off at 0.025. A horizontal dashed line indicates the genome-wide Bonferroni threshold at $p=0.05$. (C) QQ-plot shows relationships between the observed and expected -log$_10$($p$) values. A solid line indicates randomly expected -log$_10$($p$) and the shaded area corresponds to its 95\% confidence intervals.](../figures/fig1_comb.png){#fig:ManPlot}  
 
 ![Figure 2. The Col-0 wild type and three mutants of *Arabidopsis thaliana* (A) showing the phenotypes of initial size (B), flowering time (C), and aphid colonization one week after the release (D) in a laboratory. Asterisks above each mutant indicate adjusted $p$-values by GLMs in comparison with the wild type, WT; *** $p<0.001$, ** $p<0.01$, * $p<0.05$. Boxes: median with upper and lower quartile; Whiskers: 1.5 $\times$ inter-quartile range.](../figures/mutant.png){#fig:mutant}  
 
 
 # Supplementary Materials  
 
-![Figure S1. The emergence of wingless and winged aphids on _Arabidopsis thaliana_ accessions grown in the field.](../figures/aphid_No_per_day.pdf){#fig:aphid_day}  
+![Figure S1. Temporal patterns of the emergence of wingless and winged aphids on *Arabidopsis thaliana* accessions grown in the field. X-axes shows the number of winged (top row) or wingless (bottom row) aphids at current monitoring time. Y-axes show the total number of both winged and wingless aphids at the next monitoring time. A single point corresponds to an individual plant. The number of aphids represents the total number of individuals of *Lipaphis erysimi* and *Brevicoryne brassicae*.](../figures/aphid_No_per_day.pdf){#fig:aphid_day}  
 
-![Figure S2. A snapshot of the genomic region near Chr3-4579292 in the 1001 Genome Browser (http://signal.salk.edu/atg1001/3.0/gebrowser.php). The upper four accessions carried a rare allele susceptible to aphids (inset of Fig. [1](#fig:ManPlot){reference-type="ref"}). The accessions listed below Col-0 carried a major allele and harbored no aphids in the field GWAS.](../figures/database_snapshot/Slide3.png){#fig:1001browser}  
+![Figure S2. A snapshot of the genomic region near Chr3-4579292 in the 1001 Genome Browser (http://signal.salk.edu/atg1001/3.0/gebrowser.php). The upper four accessions in A carried a rare allele susceptible to aphids. The accessions listed below Col-0 carried a major allele and harbored no aphids in the field GWAS. Panel B displays log-transformed number of aphids between the major and rare allele at Chr3-4579292. ](../figures/1001browser.png){#fig:1001browser}  
 
-![Figure S3. The number of aphids during the later period of incubation. Asterisks indicate significant difference between each mutant and the wild type with Poisson GLMs: *** $p<0.001$, ** $p<0.01$, * $p<0.05$. Boxes: median with upper and lower quartile; Whiskers: 1.5 $\times$ inter-quartile range.](../figures/aphid_last.pdf){#fig:aphid_last}  
+![Figure S3. The number of aphids during the later period of incubation. Asterisks indicate significant difference between each mutant and the wild type with Poisson GLMs: *** $p<0.001$, ** $p<0.01$, * $p<0.05$. Boxes: median with upper and lower quartile; Whiskers: 1.5 $\times$ inter-quartile range. The patterns remained almost the same as Figure [2](#fig:mutant){reference-type="ref"}D after the failure of aphid colonization. The levels of statistical significance became larger near the end of experiment due to severe over-dispersion. We thus provided results at the initial time point in the main text.](../figures/aphid_last.pdf){#fig:aphid_last}  
 
 
 Table S1. List of GWAS accessions and phenotypes.  
