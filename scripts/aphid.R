@@ -105,7 +105,7 @@ ggboxplot(aphidgr, x="Mutant", y="size",xlab = "Plant genotypes",ylab = "Initial
 
 p2 = ggplot(data=aphidgr,mapping=aes(x=Mutant,y=size))+geom_boxplot(outlier.shape=NA,fill=c("white","grey","white","white"))+geom_jitter(alpha=0.25,height=0.1,width=0.1)+
   ggtitle("B") +
-  xlab("") + ylab("Initial diameter (cm)")+theme_classic()+
+  xlab("") + ylab("Initial diameter (cm)") + theme_classic() + ylim(0,NA) +
   geom_text(data.frame(x=1,y=7.5),mapping=aes(x=x,y=y),label="***",size=6) +
   geom_text(data.frame(x=3,y=7.5),mapping=aes(x=x,y=y),label="**",size=6)
 
@@ -128,11 +128,12 @@ p.adjust(pvec,method="bonferroni")
 
 p3 = ggplot(data=AphidsNo,mapping=aes(x=Mutant,y=flowering+20))+geom_boxplot(outlier.shape=NA,fill=c("white","grey","white","white"))+geom_jitter(alpha=0.25,height=0.1,width=0.1)+
   ggtitle("C") +
-  xlab("") + ylab("Days to flowering")+theme_classic() + 
+  xlab("") + ylab("Days to flowering") + theme_classic() + ylim(0,NA) +
   geom_text(data.frame(x=c(1,4),y=c(45,45)),mapping=aes(x=x,y=y),label="***",size=6) +
   geom_text(data.frame(x=3,y=45),mapping=aes(x=x,y=y),label="**",size=6)
 
 pic = ggdraw() +  draw_image("./figures/mutantPhoto.png") + draw_label(label="A",x = 0.075, y = 0.975, hjust = 1, vjust = 1)
 
 p = ggarrange(pic,p2,p3,p1,nrow=2,ncol=2)
-ggsave(p,filename="mutant.pdf",width=8, height=6)
+ggsave(p,filename="./figures/mutant.pdf",width=8, height=6)
+ggsave(p,filename="./figures/mutant.png",width=8, height=6, dpi=600)
