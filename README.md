@@ -8,8 +8,8 @@ An input file for GWA-portal, an output from GWA-portal, and *Arabidopsis* mutan
 - figures  
 output figures from R and/or figures used for the manuscript  
 
-- paper  
-working directory for manuscript writing (manuscript.md). Bibliography files (.bib and .csl) are also included.  
+- manuscript  
+temporal working directory for manuscript writing (manuscript.md). Bibliography files (.bib and .csl) are also included.  
 
 - scripts  
 R scripts to analyze GWAS outputs (GWAp_output.R) and *Arabidopsis* mutant data (aphid.R).  
