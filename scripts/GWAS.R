@@ -8,73 +8,53 @@ sum(pheno$Bolting) / nrow(pheno)
 
 # aphid no. per day
 df = read.csv("./data/aphid_No_per_day.csv")
-pdf(file="./figures/aphid_No_per_day.pdf",width=10,height=6)
+pdf(file="./figures/aphid_No_per_day.pdf",width=9,height=6)
 
-par(mfcol=c(2,5))
+par(mfcol=c(2,5), mar=c(2,2,3,2))
 plot(jitter(subset(df,Date=="20180707")$aphid_wing),
      jitter(subset(df,Date=="20180710")$aphid_total),
      las=1,bty="L",pch=16,col=grey(0.25,0.25),
-     ylab="Total no. of aphids at t+1",
-     xlab="No. of winged aphids at t",
      main="t = 20180707")
 
 plot(jitter(subset(df,Date=="20180707")$aphid_wingless),
      jitter(subset(df,Date=="20180710")$aphid_total),
-     las=1,bty="L",pch=16,col=grey(0.25,0.25),
-     ylab="Total no. of aphids at t+1",
-     xlab="No. of wingless aphids at t")
+     las=1,bty="L",pch=16,col=grey(0.25,0.25))
 
 plot(jitter(subset(df,Date=="20180710")$aphid_wing),
      jitter(subset(df,Date=="20180713")$aphid_total),
      las=1,bty="L",pch=16,col=grey(0.25,0.25),
-     ylab="Total no. of aphids at t+1",
-     xlab="No. of winged aphids at t",
      main="t = 20180710")
 
 plot(jitter(subset(df,Date=="20180710")$aphid_wingless),
      jitter(subset(df,Date=="20180713")$aphid_total),
-     las=1,bty="L",pch=16,col=grey(0.25,0.25),
-     ylab="Total no. of aphids at t+1",
-     xlab="No. of wingless aphids at t")
+     las=1,bty="L",pch=16,col=grey(0.25,0.25))
 
 plot(jitter(subset(df,Date=="20180713")$aphid_wing),
      jitter(subset(df,Date=="20180716")$aphid_total),
      las=1,bty="L",pch=16,col=grey(0.25,0.25),
-     ylab="Total no. of aphids at t+1",
-     xlab="No. of winged aphids at t",
      main="t = 20180713")
 
 plot(jitter(subset(df,Date=="20180713")$aphid_wingless),
      jitter(subset(df,Date=="20180716")$aphid_total),
-     las=1,bty="L",pch=16,col=grey(0.25,0.25),
-     ylab="Total no. of aphids at t+1",
-     xlab="No. of wingless aphids at t")
+     las=1,bty="L",pch=16,col=grey(0.25,0.25))
 
 plot(jitter(subset(df,Date=="20180716")$aphid_wing),
      jitter(subset(df,Date=="20180719")$aphid_total),
      las=1,bty="L",pch=16,col=grey(0.25,0.25),
-     ylab="Total no. of aphids at t+1",
-     xlab="No. of winged aphids at t",
      main="t = 20180716")
 
 plot(jitter(subset(df,Date=="20180716")$aphid_wingless),
      jitter(subset(df,Date=="20180719")$aphid_total),
-     las=1,bty="L",pch=16,col=grey(0.25,0.25),
-     ylab="Total no. of aphids at t+1",
-     xlab="No. of wingless aphids at t")
+     las=1,bty="L",pch=16,col=grey(0.25,0.25))
 
 plot(jitter(subset(df,Date=="20180719")$aphid_wing),
      jitter(subset(df,Date=="20180722")$aphid_total),
      las=1,bty="L",pch=16,col=grey(0.25,0.25),
-     ylab="Total no. of aphids at t+1",
-     xlab="No. of winged aphids at t",
      main="t = 20180719")
 
 plot(jitter(subset(df,Date=="20180719")$aphid_wingless),
      jitter(subset(df,Date=="20180722")$aphid_total),
-     las=1,bty="L",pch=16,col=grey(0.25,0.25),
-     ylab="Total no. of aphids at t+1",
-     xlab="No. of wingless aphids at t")
+     las=1,bty="L",pch=16,col=grey(0.25,0.25))
 
 dev.off()
 

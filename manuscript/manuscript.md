@@ -24,10 +24,10 @@ csl: proceedings-of-the-royal-society-b.csl
 
 # Abstract  
 Field studies have shown that plant phenological and architectural traits affect herbivore settlement to host plants.
-Yet, less is known about key genes underlying roles of the plant life-history traits in shaping herbivory. 
+Yet, little is known about key genes allowing plants to escape from herbivory. 
 Here, we conducted a genome-wide association study (GWAS) of aphid abundance in a field population of *Arabidopsis thaliana*. 
 This field GWAS detected a significant peak on the third chromosome of *A. thaliana*. 
-Out of candidate genes near the peak, a mutant of the putative ribosomal gene (AT3G13882) exhibited far slower growth and later flowering phenotype than a wild type under laboratory condition. 
+Out of candidate genes near the peak, a mutant of the putative ribosomal gene (AT3G13882) exhibited slower growth and later flowering phenotype than a wild type under laboratory condition. 
 Likely due to 61\% smaller size of this ribosomal gene mutant than the wild type, the turnip aphid *Lipaphis erysimi* failed to settle a colony on the ribosomal gene mutant. 
 These findings suggest that roles of growth-related genes in modulating herbivore abundance may be more important than currently recognized.
 
@@ -83,20 +83,14 @@ Accelerated mixed models were used for association mapping with a correction of 
 The number of aphids was ln($x+1$)-transformed to improve normality. 
 Input phenotype data are available as supplementary material. 
 After the association mapping, candidate genes were searched within ca. 5 kb near a focal SNP. 
-To check organ-specific expression levels of candidate genes, we referred to Klepikova Arabidopsis Atlas [@klepikova2016high] via The Arabidopsis Information Resource (<https://www.arabidopsis.org/>).  
+To inspect organ-specific expression levels of candidate genes, we referred to Klepikova Arabidopsis Atlas [@klepikova2016high] via The Arabidopsis Information Resource (<https://www.arabidopsis.org/>).  
 
 ## Mutant analysis  
 
 ### *Arabidopsis thaliana* mutants
 T-DNA sequence-indexed lines of *A. thaliana* were obtained from the Nottingham Arabidopsis Stock Centre (NASC) (https://arabidopsis.info/). 
 In addition to Columbia-0 (Col-0, NASC Accession ID: N70000) wild type, we ordered four mutant lines for a putative ribosomal gene (AT3G13882) (Table S2). 
-Following the instruction [@o2015user], the mutant lines were selected according to the criteria either (1) insertion site was confirmed in an exon of the corresponding gene or (2) insertion site was confirmed in an intron of the corresponding gene and the expression level of the corresponding gene was downregulated in the mutants compared to the Col-0 wild type. 
-We extracted the DNA of leave by CTAB method and identified the T-DNA insertion site of the obtained lines (Fig. S4) by polymerase chain reaction (PCR) amplification and Sanger sequencing (Microsynth, Switzerland) (see Table S2 and S3 for primer information). 
-The expression level was checked by semi-quantitative reverse transcription and PCR (sqRT-PCR) (Fig. S5; see Table S3 and S4 for primer information). 
-We extracted the RNA from the leave using RNeasy kit (Qiagen) and purified the RNA with DNA-free kit (Ambion). 
-RNA concentration was measured by Qubit spectrophotometer (Invitrogen). 
-Then we obtained the cDNA using High-Capacity RNA-to-cDNA kit (TaqMan). 
-After 35 cycles of PCR, the gene expression was check on 2% gel. 
+Following the instruction [@o2015user], the mutant lines were selected according to the criteria either (1) insertion site was confirmed in an exon of the corresponding gene (Fig. [S1](#fig:tDNA){reference-type="ref"}) or (2) insertion site was confirmed in an intron of the corresponding gene and the expression level of the corresponding gene was downregulated in the mutants compared to the Col-0 wild type (Fig. [S2](#fig:sqRT_PCR){reference-type="ref"}). 
 The selected lines were back-crossed to the Col-0 wild type for three times. 
 Because some lines failed to germinate during the back-crossing, we finally obtained one confirmed line of the SALK_039481 (NASC Accession ID: N670586) for AT3G13882. 
 
@@ -118,16 +112,15 @@ Days to flowering i.e., flowering time was also recorded during the aphid experi
 
 ### Data analysis  
 
-We used generalized linear models (GLM) to test phenotypic differences between each mutant and the Col-0 wild type.
+We used generalized linear models (GLM) to test phenotypic differences between the mutant and the Col-0 wild type.
 The plant size and flowering time were analyzed using GLMs with Gaussian distribution, which was equivalent to standard linear models. 
 The number of aphids i.e., the count response was analyzed using GLMs with Poisson error structure and a log link function. 
 Wald-tests were used to calculate $p$-values from GLMs. 
-Multiple comparisons were corrected using the Bonferroni method. 
 The failure of aphid colonization at the initial stage amplified over-dispersion of the aphid number at later time points, but negative binomial GLMs could not be converged in some pairs due to small sample size. 
-We therefore applied Poisson GLMs for the modest dispersion 7-days after the release (Fig. [2](#fig:mutant){reference-type="ref"}D), while the results of later time points were provided as supplementary information (Fig [S3](#fig:aphid_stat){reference-type="ref"}). 
+We therefore applied Poisson GLMs for the modest dispersion 7-days after the release (Fig. [2](#fig:mutant){reference-type="ref"}D), while the results of later time points were provided as supplementary information (Fig [S5](#fig:aphid_stat){reference-type="ref"}). 
 All statistical analyses were performed using R version 4.0.3 [@Rcite].  
 
-# Results and Discussion
+# Results
 
 ## Field GWAS of the aphid abundance   
 
@@ -136,11 +129,11 @@ Starting from the vegetative phase, 38\% of individual plants initiated bolting 
 The two species of specialist aphids, *Lipaphis erysimi* and *Brevicoryne brassicae*, mainly occurred on *A. thaliana*. 
 The aphid abundance was higher on bolted accessions than on non-bolted accessions (non-bolted and bolted plants = 0 and 7 aphids in median, respectively; Mann-Whitney's $U$-test, $U = 124158, p < 10^{-15}$), suggesting that plant life-cycle might be associated with plants' capacity to harbor aphids. 
 In addition, we also distinguished the abundance of winged and wingless aphids in order to infer the colonization processes of aphids on *A. thaliana*. 
-Winged and wingless aphids colonized vegetative plants until the first monitoring after the transplant, but many of these aphids did not establish a colony in subsequent monitoring (the days between 07 and 10 July 2018: Fig. [S1](#fig:aphid_day){reference-type="ref"}). 
+Winged and wingless aphids colonized vegetative plants until the first monitoring after the transplant, but many of these aphids did not establish a colony in subsequent monitoring (the days between 07 and 10 July 2018: Fig. [S3](#fig:aphid_day){reference-type="ref"}). 
 This additional observation suggests that colonized aphids do not always establish a colony and thereby the success of the colony establishment also depends on the host suitability after colonization.    
 
 The aphid abundance had high heritability among the plant accessions ($h^2 = 0.7$), indicating that this trait was likely under genetic control and thus deserved further association mapping in GWAS. 
-Regarding the aphid abundance, our mapping detected a significant SNP in an intergenic region above the genome-wide Bonferroni threshold (chr3-4579292, $p<10^{-8}$,  MAF=0.026: Fig. [1](#fig:ManPlot){reference-type="ref"}A,B; see also Fig. [S2](#fig:qqplot){reference-type="ref"} for quantile-quantile plots). 
+Regarding the aphid abundance, our mapping detected a significant SNP in an intergenic region above the genome-wide Bonferroni threshold (chr3-4579292, $p<10^{-8}$,  MAF=0.026: Fig. [1](#fig:ManPlot){reference-type="ref"}A,B; see also Fig. [S4](#fig:qqplot){reference-type="ref"} for quantile-quantile plots). 
 Nearby this significant SNP (chr3-4579292), we found three candidate genes, such as a putative ribosomal gene (AT3G13882), *EPIDERMAL PATTERNING FACTOR LIKE 3* (*EPFL3*: AT3G13898), and *MYB26*. 
 Out of these three genes, the putative ribosomal gene (AT3G13882) is known to be highly expressed in vegetative organ such as leaves [@klepikova2016high]. 
 The other two genes, *EPFL3* and *MYB26*, are known to be highly expressed only in reproductive organ such as anthers or pistils [@klepikova2016high]. 
@@ -149,15 +142,15 @@ Because aphids were unlikely to suck saps from anthers and pistils, we focused o
 ## Mutant plant growth and aphid colony establishment in the laboratory  
 
 To examine visible phenotypes of the ribosomal gene mutant (AT3G13882), we compared growth and flowering time of this mutant with the Col-0 wild type. 
-After 20 days of growth, the AT3G13882 mutant had a significantly smaller size than the wild type (adjusted $p<0.001$ by Gaussian GLMs: Fig [2](#fig:mutant){reference-type="ref"}A,B), showing the delayed growth of AT3G13882 mutant. 
-The flowering time of the AT3G13882 mutant was also significantly later than the wild type (adjusted $p<0.001$: Fig [2](#fig:mutant){reference-type="ref"}A,C). 
+After 20 days of growth, the AT3G13882 mutant had a significantly smaller size than the wild type ($p<0.001$ by Gaussian GLMs: Fig. [2](#fig:mutant){reference-type="ref"}A,B), showing the delayed growth of AT3G13882 mutant. 
+The flowering time of the AT3G13882 mutant was also significantly later than the wild type ($p<0.001$: Fig. [2](#fig:mutant){reference-type="ref"}A,C). 
 The slower growth and delayed flowering of the ribosomal gene mutant (AT3G13882) then led us to test whether the delayed growth could prevent the establishment of aphid colonies after colonization.  
 
 To examine the establishment process after aphid colonization, we released wingless individuals of *Lipaphis erysimi* on vegetative plants of the ribosomal gene mutant (AT3G13882) and the wild type. 
-One week after the release, aphids were more likely to failed colonizing the AT3G13882 mutant than on the wild type (adjusted $p<0.001$ by Poisson GLMs; Fig [2](#fig:mutant){reference-type="ref"}D), showing adversarial effects of delayed growth on the aphid colony establishment.  
+One week after the release, aphids were more likely to failed colonizing the AT3G13882 mutant than on the wild type ($p<0.001$ by Poisson GLMs; Fig. [2](#fig:mutant){reference-type="ref"}D), showing adversarial effects of delayed growth on the aphid colony establishment.  
 
-## Genetic implications for the complexity of plant defense in the field
 
+# Discussion
 Previous field studies used mutant plants to show roles of particular functional genes in chemical defense (e.g., *LOX*s in *Nicotiana attenuata* [@kessler2004silencing; @schuman2015plant] or physical defense (*GLABRA1* in *A. thaliana* [@sato2019plant]) against herbivores. 
 In contrast, our field GWAS offered a hypothesis-free approach to screen candidate genes responsible for herbivore abundance, which did not detect the known defense-related genes near its peak. 
 This result implies that gene functions revealed under laboratory condition may not always reflect those under field environments [@zaidem2019evolutionary]. 
@@ -197,18 +190,22 @@ This study was supported by the University of Zurich through the University Rese
 
 # Figures 
 
-![Figure 1. Genome-wide association study of the aphid abundance on 196 *A. thaliana* accessions grown in the field. (A) A genomic region near the top-scoring SNP at Chr3-4579292 desplays the position of candidate genes. Red colors highlight genes analyzed in Figure [2](#fig:mutant){reference-type="ref"}. (B) Manhattan plot shows the association score of -log$_10$($p$) across five chromosomes of *A. thaliana* with MAF cut-off at 0.025. A horizontal dashed line indicates the genome-wide Bonferroni threshold at $p=0.05$.](../figures/Fig1rev.png){#fig:ManPlot}  
+![Figure 1. Genome-wide association study of the aphid abundance on 196 *Arabidopsis thaliana* accessions grown in the field. (A) A genomic region near the top-scoring SNP at Chr3-4579292 desplays the position of candidate genes. Red colors highlight genes within 5 kbp from the focal SNP. (B) Manhattan plot shows the association score of -log~10~($p$) across five chromosomes of *A. thaliana* with MAF cut-off at 0.025. A horizontal dashed line indicates the genome-wide Bonferroni threshold at $p=0.05$.](../figures/fig1_comb.png){#fig:ManPlot}  
 
-![Figure 2. The Col-0 wild type and the ribosomal gene mutant (AT3G13882) of *Arabidopsis thaliana* (A) showing the phenotypes of initial size (B), flowering time (C), and aphid colonization one week after the release (D) in a laboratory. Asterisks above each mutant indicate adjusted $p$-values by generalized linear models in comparison with the wild type, WT; *** $p<0.001$, ** $p<0.01$, * $p<0.05$. Boxes: median with upper and lower quartile; Whiskers: 1.5 $\times$ inter-quartile range.](../figures/Fig2rev.png){#fig:mutant}  
+![Figure 2. The photorgraph (A), initial size (B), flowering time (C), and aphid abundance (D) of the Col-0 wild type (WT) and the ribosomal gene mutant (AT3G13882) of *Arabidopsis thaliana* under the laboratory condition. The aphid abundance is defined by log~2~(no. of aphids + 1). Asterisks indicate the statistical significance by generalized linear models; ***$p<0.001$, **$p<0.01$, *$p<0.05$. Boxes: median with upper and lower quartile; Whiskers: 1.5 $\times$ inter-quartile range.](../figures/mutant.png){#fig:mutant}  
 
 
 # Supplementary Materials  
 
-![Figure S1. Temporal patterns of the emergence of wingless and winged aphids during the field GWAS experiment. X-axes shows the number of winged (top row) or wingless (bottom row) aphids at current monitoring day (t=year-month-day). Y-axes show the total number of both winged and wingless aphids at the next monitoring date (t+1). A single point corresponds to an individual plant. The number of aphids represents the total number of individuals of *Lipaphis erysimi* and *Brevicoryne brassicae*.](../figures/aphid_No_per_day.pdf){#fig:aphid_day}  
+![Figure S1. Position of coding region and transfer-DNA (T-DNA) mutation on the putative ribosomal gene AT3G13882. Dark blue: gene position; green: coding DNA sequence (CDS); yellow: mRNA; light blue: mutant insertion; red: primers. The primer IDs shown by four digits correspond to those listed in Table S3. To confirm the T-DNA insertion site of the line we used for the aphid experiment (i.e., SALK_039481), we extracted the DNA from leaves using the CTAB method. We then identified the T-DNA insertion site by polymerase chain reaction (PCR) amplification and Sanger sequencing (Microsynth, Switzerland).](../figures/AT3G13882.pdf){#fig:tDNA}  
 
-![Figure S2. A quantile-quantile (QQ) plot showing relationships between the observed and expected -log$_10$($p$) values. A solid line indicates randomly expected -log$_10$($p$) and the shaded area corresponds to its 95\% confidence intervals. The top-scoring SNP at Chr3-4579292 is larger than the upper 95\% confidence interval.](../figures/FigS2qqplot.png){#fig:qqplot}  
+![Figure S2. Semi-quantitative reverse transcription and polymerase chain reaction (sqRT-PCR) of the mutant line we used for the aphid experiment. To perform sqRT-PCR, we extracted the RNA from leaves using RNeasy kit (Qiagen) and purified the RNA with DNA-free kit (Ambion). RNA concentration was measured by Qubit spectrophotometer (Invitrogen). Then we obtained the cDNA using High-Capacity RNA-to-cDNA kit (TaqMan). After 35 cycles of PCR, the gene expression was check on 2% gel as shown in this supplementary figure. Two primer sets were used (see Table S4 for the primer information). The expected length of amplified fragment was 438 bp (primer pair A) and 436 bp (primer pair B). This figure shows that the gene expression of AT3G13882 is suppressed in the mutant line SALK_039481.](../figures/FigS5.png){#fig:sqRT_PCR}  
 
-![Figure S3. The number of aphids during the later period of incubation. Asterisks indicate significant difference between each mutant and the wild type with Poisson GLMs: *** $p<0.001$, ** $p<0.01$, * $p<0.05$. Boxes: median with upper and lower quartile; Whiskers: 1.5 $\times$ inter-quartile range. The patterns remained almost the same as the main Figure [2](#fig:mutant){reference-type="ref"}D. The levels of statistical significance became larger near the end of experiment due to severe over-dispersion. We thus provided results at the initial time point in the main text.](../figures/aphid_last.pdf){#fig:aphid_last}  
+![Figure S3. Temporal patterns of the emergence of wingless and winged aphids during the field GWAS experiment. X-axes shows the number of winged (top row) or wingless (bottom row) aphids at current monitoring day (t=year-month-day). Y-axes show the total number of both winged and wingless aphids at the next monitoring date (t+1). A single point corresponds to an individual plant. The number of aphids represents the total number of individuals of *Lipaphis erysimi* and *Brevicoryne brassicae*.](../figures/aphid_No_per_day.png){#fig:aphid_day}  
+
+![Figure S4. A quantile-quantile (QQ) plot showing relationships between the observed and expected -log~10~($p$) values. A solid line indicates randomly expected -log~10~($p$) and the shaded area corresponds to its 95\% confidence intervals. The top-scoring SNP at Chr3-4579292 is larger than the upper 95\% confidence interval.](../figures/log_BbLe_max_QQ.png){#fig:qqplot}  
+
+![Figure S5. The aphid abundance during the later period of incubation. The aphid abundance is defined by log~2~(no. of aphids + 1). Asterisks indicate the statistical significance by generalized linear models; ***$p<0.001$, **$p<0.01$, *$p<0.05$. Boxes: median with upper and lower quartile; Whiskers: 1.5 $\times$ inter-quartile range. The patterns remained almost the same as the main Figure [2](#fig:mutant){reference-type="ref"}D. The levels of statistical significance became larger near the end of experiment due to severe over-dispersion. We thus provided results at the initial time point in the main text.](../figures/aphid_last.pdf){#fig:aphid_last}  
 
 
 Table S1. List of GWAS accessions and phenotypes.  
