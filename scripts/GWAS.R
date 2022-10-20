@@ -1,7 +1,7 @@
 # check phenotypes
 pheno = read.csv("./data/20220301_AtZurich2018aphidsGWAp.csv",header=TRUE)
-aggregate(log_BbLe_max~Bolting,data=pheno,median)
-wilcox.test(log_BbLe_max~Bolting,data=pheno)
+aggregate(log_BbLe_max~Bolting,data=pheno,mean)
+t.test(log_BbLe_max~Bolting,data=pheno)
 
 # % of bolted plants
 sum(pheno$Bolting) / nrow(pheno)
