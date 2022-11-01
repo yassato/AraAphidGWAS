@@ -7,17 +7,17 @@ AphidsNo <- read.delim("./data/AphidsNo.txt")
 AphidsNo$Mutant <-factor(AphidsNo$Mutant,levels=c('AT3G13882','WT'))
 
 library(lme4)
-res = glmer(t2~Mutant+(1|No.),offset=log(size),data=AphidsNo,family="poisson",control=glmerControl(optimizer="bobyqa"))
+res = glmer(t2~Mutant+(1|No.),data=AphidsNo,family="poisson",control=glmerControl(optimizer="bobyqa"))
 summary(res)
 anova(res)
 1-pf(anova(res)[1,4],1,9)
 
-res = glmer(t3~Mutant+(1|No.),offset=log(size),data=AphidsNo,family="poisson",control=glmerControl(optimizer="bobyqa"))
+res = glmer(t3~Mutant+(1|No.),data=AphidsNo,family="poisson",control=glmerControl(optimizer="bobyqa"))
 summary(res)
 anova(res)
 1-pf(anova(res)[1,4],1,9)
 
-res = glmer(t4~Mutant+(1|No.),offset=log(size),data=AphidsNo,family="poisson",control=glmerControl(optimizer="bobyqa"))
+res = glmer(t4~Mutant+(1|No.),data=AphidsNo,family="poisson",control=glmerControl(optimizer="bobyqa"))
 summary(res)
 anova(res)
 1-pf(anova(res)[1,4],1,9)
@@ -25,7 +25,7 @@ anova(res)
 p1 = ggplot(data=AphidsNo,mapping=aes(x=Mutant,y=log2(t2+1)))+geom_boxplot(outlier.shape=NA,fill=c("white","grey"))+geom_jitter(alpha=0.25,height=0.1,width=0.1)+
   ggtitle("D") +
   xlab("") + ylab("Aphid abundance") + theme_classic() +
-  geom_text(data.frame(x=1.5,y=6),mapping=aes(x=x,y=y),label="*",size=6)
+  geom_text(data.frame(x=1.5,y=6),mapping=aes(x=x,y=y),label="**",size=6)
 
 s1 = ggplot(data=AphidsNo,mapping=aes(x=Mutant,y=log2(t3+1)))+geom_boxplot(outlier.shape=NA,fill=c("white","grey"))+geom_jitter(alpha=0.25,height=0.1,width=0.1)+
   ggtitle("A: 10 days") +
