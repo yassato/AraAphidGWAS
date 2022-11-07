@@ -12,12 +12,12 @@ csl: proceedings-of-the-royal-society-b.csl
 **Yasuhiro Sato**^1,2†\*^  
 **Misako Yamazaki**^1^   
 **Matthew A. Barbour**^1,3^   
-**...(other co-authors from IEU, if any)...**^1^   
+**Jordi Bascompte**^1^   
 **Kentaro K. Shimizu**^1,4\*^    
 
 ^1^ Department of Evolutionary Biology and Environmental Studies, University of Zurich, Winterthurerstrasse 190, 8057 Zurich, Switzerland    
 ^2^ Research Institute for Food and Agriculture, Ryukoku University, Yokotani 1-5, Seta Oe-cho, Otsu, Shiga 520-2194, Japan  
-^3^ Université de Sherbrooke, Canada  
+^3^ Départemente de Biologie, Université de Sherbrooke, 2500 boulevard de l’Université, Sherbrooke, QC, J1K 2R1, Canada  
 ^4^ Kihara Institute for Biological Research, Yokohama City University, Maioka 641-12, Totsuka-ward, Yokohama 244-0813, Japan  
 ^†^ *These authors equally contributed to this study.*  
 ^\*^ *Co-correspondence; Y.S. (yasuhiro.sato@uzh.ch); K.K.S. (kentaro.shimizu@uzh.ch)*  
@@ -27,7 +27,7 @@ Field studies have shown that plant phenological and architectural traits often 
 Although plant genes involved in physical and chemical defense are well studied, less is known about the genetic basis underlying effects of plant growth traits on herbivory. 
 Here, we conducted a genome-wide association study (GWAS) of aphid abundance in a field population of *Arabidopsis thaliana*. 
 This field GWAS detected a significant peak on the third chromosome of *A. thaliana*. 
-Out of candidate genes near this significant genomic region, a mutant of a ribosomal gene (AT3G13882) exhibited slower growth and later flowering than a wild type under laboratory condition. 
+Out of candidate genes near this significant genomic region, a mutant of a ribosomal gene (AT3G13882) exhibited slower growth and later flowering than a wild type under laboratory conditions. 
 A no-choice assay with the turnip aphid, _Lipaphis erysimi_, found that aphids were unable to successfully establish on the mutant. These findings suggest the potential role of growth-related genes in altering herbivore abundance.
 
 # Introduction
@@ -36,18 +36,18 @@ While chemical and physical traits have long been the main focus of anti-herbivo
 For example, phenological changes (e.g., early flowering) can allow plants to escape from seasonal herbivory [@kawagoe2010escape; @marquis2021escape]. 
 The visibility of plants for herbivores, namely plant apparency [@feeny1976plant], also changes across plant ontogeny (e.g., from vegetative to reproductive phase), which alters the risk of herbivore attacks [@zverev2017ontogenetic; @barton2017future]. 
 By focusing on genetic variation within a plant species, several studies have shown that plant phenological and architectural traits shape heritable variation in herbivory [@johnson2009heritability; @barbour2015multiple; @sato2019plant].
-Yet, less is known about genetic bases underlying the effects of the plant life-history traits on herbivory.  
+Yet, less is known about the underlying genetic basis of the plant life-history traits on herbivory.  
 
 Genome-wide association study (GWAS) is an effective way to dissect the genetic architecture of ecologically important traits [@santure2018wild; @barker2019linking]. 
 Through associations between single nucleotide polymorphisms (SNPs) and traits, GWAS provides a hypothesis-free approach to identify novel genes from natural phenotypic variation [@fujii2019stigmatic; @tsuchimatsu2020adaptive]. 
-Recent studies have suggested that controlled laboratory conditions are unlikely to reflect outdoor environments where interspecific interactions typically occur [@honjo2020seasonality; @sato2019transcriptional].
+Recent studies showed that controlled laboratory conditions are unlikely to reflect outdoor environments where interspecific interactions typically occur [@honjo2020seasonality; @sato2019transcriptional].
 This fact emphasizes the importance of *in natura* study of functional genes [@shimizu2011plant; @kudoh2016molecular; @yamasaki2017genomics; @zaidem2019evolutionary; @stockenhuber2021uv].
 To achieve this goal, it is important to conduct GWAS under field conditions.
 
 *Arabidopsis thaliana* is a model plant species distributed throughout Europe and naturalized around the world. 
 While *A. thaliana* usually blooms in spring after over-wintering, some cohorts have overlapping life cycles from spring to autumn [@thompson1994spatiotemporal; @taylor2017interacting; @stockenhuber2021uv].
 When *A. thaliana* plants emerge from late spring to early summer, they are threatened by various herbivores [@mosleh2009herbivory; @sato2019plant]. 
-Of the diverse insect herbivores, aphids are known as major herbivores occurring across a natural distribution range of *A. thaliana* [@zust2012natural]. 
+Of the diverse insect herbivores, aphids are known to be major herbivores occurring across the natural distribution range of *A. thaliana* [@zust2012natural]. 
 Because aphids often suck phloem sap from leaf veins and flowering stems, we hypothesized that plant life-history traits may play a key role in mediating aphid herbivory under field conditions.  
 
 To reveal the genetic architecture of aphid herbivory, we combined GWAS with a mutant analysis in *A. thaliana*. 
@@ -59,7 +59,7 @@ To further test candidate genes, we then cultivated and released the turnip aphi
 ## Field GWAS      
 
 ### Plant genotypes  
-We obtained *Arabidopsis thaliana* genotypes that were selfed and maintained as inbred lines, called "accession", from the Arabidopsis Biological Resource Center (<https://abrc.osu.edu/>). 
+We obtained *Arabidopsis thaliana* genotypes that were selfed and maintained as inbred lines, called "accessions", from the Arabidopsis Biological Resource Center (<https://abrc.osu.edu/>). 
 We used the same set of 196 *A. thaliana* accessions as a previous study [@sato2021neighbor] except for two trichome mutants and an ungenotyped accession. 
 All of these accessions were genotyped in the RegMap [@horton2012genome] and 1001 Genomes [@alonso20161] projects. 
 The list of accessions and phenotypes measured in this study is available in Table S1.  
@@ -115,7 +115,7 @@ We used linear mixed models (LMMs) or generalized linear mixed models (GLMMs) to
 The plant size and flowering time were analyzed using LMMs that assumed Gaussian errors. 
 The number of aphids i.e., the count response was analyzed using GLMMs with Poisson error structure and log link function. 
 Paired positions of a mutant and wild type plant were incorporated as a random effect to consider spatial heterogeneity within a growth chamber environment.
-Analysis of deviance with $F$-test was used to test the significance of the mutant vs. wild type (df1 = 1) against phenotypic variation within the random effect of the paired positions (df2 = 10 pairs - 1 fixed effect = 9). 
+An analysis of deviance with a $F$-test was used to test the significance of the mutant vs. wild type (df1 = 1) against phenotypic variation within the random effect of the paired positions (df2 = 10 pairs - 1 fixed effect = 9). 
 All statistical analyses were performed using R version 4.0.3 [@Rcite]. 
 For LMM and GLMM, we used the lmer and glmer function implemented in the lme4 package [@lme4].
 
@@ -146,7 +146,7 @@ The flowering time of the AT3G13882 mutant was also significantly later than the
 The slower growth and delayed flowering of the ribosomal gene mutant led us to test whether the delayed growth could prevent the establishment of aphid colonies after colonization.  
 
 Then, to examine colony establishment after aphid colonization, we released wingless individuals of *Lipaphis erysimi* on rosette plants of the ribosomal gene mutant (AT3G13882) and the wild type. 
-We observed the reduced number of aphids on the AT3G13882 mutant compared to the wild type at 7, 10, 14 days after the release of aphids ($F_{1,9}=19.3, p=0.0017$ at 7 days; Fig. [2](#fig:mutant){reference-type="ref"}D: see also Fig. [S5](#fig:aphid_stat){reference-type="ref"} for results at 10 and 14 days), suggesting that the delayed growth of the host negatively affected aphid colony establishment.  
+We observed a reduced number of aphids on the AT3G13882 mutant compared to the wild type at 7, 10, 14 days after the release of aphids ($F_{1,9}=19.3, p=0.0017$ at 7 days; Fig. [2](#fig:mutant){reference-type="ref"}D: see also Fig. [S5](#fig:aphid_stat){reference-type="ref"} for results at 10 and 14 days), suggesting that the delayed growth of the host negatively affected aphid colony establishment.  
 
 # Discussion
 While ribosomal genes have long been considered housekeeping genes of the protein synthesis machinery, mutants of ribosome-related genes exhibit a wide variety of growth and reproductive phenotypes. 
@@ -195,7 +195,7 @@ This study was supported by the University of Zurich through the University Rese
 
 ![Figure S1. Schematic structure of the ribosomal gene AT3G13882. Green boxes: mRNA for two splice variants; triangle: the position of Transfer-DNA (T-DNA) insersion; red arrrows: primers for checking the T-DNA insertion. The primer IDs shown by four digits (oXXXX) correspond to those listed in Table S3. We downloaded the annotations from Genbank (Gene ID: 3768810), and visualized the position of the gene and primers using QIAGEN CLC Main Workbench. To confirm the T-DNA insertion site of SALK_039481, we extracted DNA from leaves using the CTAB method. We then amplified the DNA by polymerase chain reaction (PCR) as follows: 2 min at 95$^\circ$C; 35 cycles of 15 s at 95$^\circ$C, 30 s at 55$^\circ$C, 1.5 min at 72$^\circ$C; and a final extension step of 3 min at 72$^\circ$C. The PCR product was finally sequenced by Sanger sequencing to confirm the insertion site.](../figures/AT3G13882.pdf){#fig:tDNA}  
 
-![Figure S2. Semi-quantitative reverse transcription and polymerase chain reaction (sqRT-PCR) of the ribosomal gene mutant mutant AT3G13882 (SALK_039481). To perform sqRT-PCR, we extracted the RNA from leaves using RNeasy kit (Qiagen: Catalogue Number: 74181) and purified the RNA with DNA-free kit (Ambion: Cat. No. AM1906). RNA concentration was measured by Qubit spectrophotometer (Invitrogen: Cat. No. Q10211). Then we obtained the cDNA using High-Capacity RNA-to-cDNA kit (Applied Biosystems: Cat. No. 4387406) from 500 ng of the total RNA. The cDNA was amplified by PCR as follows: 3 min at 95$^\circ$C; 28 cycles of 15 s at 95$^\circ$C, 30 s at 55$^\circ$C, 1 min at 72$^\circ$C; and a final extension step of 5 min at 72$^\circ$C. A gel electrophoresis was performed using a 1\% agarose with 120 V for 60 min. The PCR products were finally visualized a UV trans-illuminator system. Two primer sets A-D were used for AT3G13882; and E for an internal control gene *ETL1* (see Table S4 for the primer information). This figure shows that the gene expression of AT3G13882 is suppressed in the mutant line SALK_039481.](../figures/FigS_gel_annotation.tiff){#fig:sqRT_PCR}  
+![Figure S2. Semi-quantitative reverse transcription and polymerase chain reaction (sqRT-PCR) of the ribosomal gene mutant mutant AT3G13882 (SALK_039481). To perform sqRT-PCR, we extracted the RNA from leaves using RNeasy kit (Qiagen: Catalogue Number: 74181) and purified the RNA with DNA-free kit (Ambion: Cat. No. AM1906). RNA concentration was measured by Qubit spectrophotometer (Invitrogen: Cat. No. Q10211). Then we obtained the cDNA using High-Capacity RNA-to-cDNA kit (Applied Biosystems: Cat. No. 4387406) from 500 ng of the total RNA. The cDNA was amplified by PCR as follows: 3 min at 95$^\circ$C; 28 cycles of 15 s at 95$^\circ$C, 30 s at 55$^\circ$C, 1 min at 72$^\circ$C; and a final extension step of 5 min at 72$^\circ$C. A gel electrophoresis was performed using a 1\% agarose with 120 V for 60 min. The PCR products were finally visualized an UV trans-illuminator system. Two primer sets A-D were used for AT3G13882; and E for an internal control gene *ETL1* (see Table S4 for the primer information). This figure shows that the gene expression of AT3G13882 is suppressed in the mutant line SALK_039481.](../figures/FigS_gel_annotation.tiff){#fig:sqRT_PCR}  
 
 ![Figure S3. Temporal patterns of the emergence of wingless and winged aphids during the field GWAS experiment. X-axes show the number of winged (top row) or wingless (bottom row) aphids at current monitoring day (t=year-month-day). Y-axes show the total number of both winged and wingless aphids at the next monitoring date (t+1). A single point corresponds to an individual plant. The number of aphids represents the total number of individuals of both *Lipaphis erysimi* and *Brevicoryne brassicae*.](../figures/aphid_No_per_day.png){#fig:aphid_day}  
 
