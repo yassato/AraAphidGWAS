@@ -8,18 +8,14 @@ bibliography: bibliography.bib
 csl: proceedings-of-the-royal-society-b.csl
 ---
   
-**Chongmeng Xu**^1†^  
-**Yasuhiro Sato**^1,2†\*^  
-**Misako Yamazaki**^1^   
-**Matthew A. Barbour**^1,3^   
-**Jordi Bascompte**^1^   
-**Kentaro K. Shimizu**^1,4\*^    
+  
+**Chongmeng Xu**^1†^, **Yasuhiro Sato**^1,2†\*^, **Misako Yamazaki**^1^, **Marcel Brasser**^1^, **Matthew A. Barbour**^1,3^, **Jordi Bascompte**^1^, **Kentaro K. Shimizu**^1,4\*^  
 
 ^1^ Department of Evolutionary Biology and Environmental Studies, University of Zurich, Winterthurerstrasse 190, 8057 Zurich, Switzerland    
 ^2^ Research Institute for Food and Agriculture, Ryukoku University, Yokotani 1-5, Seta Oe-cho, Otsu, Shiga 520-2194, Japan  
 ^3^ Départemente de Biologie, Université de Sherbrooke, 2500 boulevard de l’Université, Sherbrooke, QC, J1K 2R1, Canada  
 ^4^ Kihara Institute for Biological Research, Yokohama City University, Maioka 641-12, Totsuka-ward, Yokohama 244-0813, Japan  
-^†^ *These authors equally contributed to this study.*  
+^†^ *These authors equally contributed to this study*  
 ^\*^ *Co-correspondence; Y.S. (yasuhiro.sato@uzh.ch); K.K.S. (kentaro.shimizu@uzh.ch)*  
 
 # Abstract  
@@ -44,7 +40,7 @@ Recent studies showed that controlled laboratory conditions are unlikely to refl
 This fact emphasizes the importance of *in natura* study of functional genes [@shimizu2011plant; @kudoh2016molecular; @yamasaki2017genomics; @zaidem2019evolutionary; @stockenhuber2021uv].
 To achieve this goal, it is important to conduct GWAS under field conditions.
 
-*Arabidopsis thaliana* is a model plant species distributed throughout Europe and naturalized around the world. 
+*Arabidopsis thaliana* is a model plant species distributed and naturalized around the world. 
 While *A. thaliana* usually blooms in spring after over-wintering, some cohorts have overlapping life cycles from spring to autumn [@thompson1994spatiotemporal; @taylor2017interacting; @stockenhuber2021uv].
 When *A. thaliana* plants emerge from late spring to early summer, they are threatened by various herbivores [@mosleh2009herbivory; @sato2019plant]. 
 Of the diverse insect herbivores, aphids are known to be major herbivores occurring across the natural distribution range of *A. thaliana* [@zust2012natural]. 
@@ -93,7 +89,7 @@ In addition to Columbia-0 (Col-0, NASC Accession ID: N70000) wild type, we order
 These original mutants were back-crossed to the Col-0 wild type three times.
 Following the instruction [@o2015user], we examined the insertion site by polymerase chain reaction (PCR) amplification and Sanger sequencing; and gene expression levels by Semi-quantitative reverse transcription and PCR (sqRT-PCR) (see captions of Fig. [S1](#fig:tDNA){reference-type="ref"} and Fig. [S2](#fig:sqRT_PCR){reference-type="ref"} for details). 
 We found that one of the four lines, the SALK_039481 (NASC Accession ID: N670586), indeed had a T-DNA insertion on an exon of one of two splice variants (Fig. [S1](#fig:tDNA){reference-type="ref"}) and reduced expression level of AT3G13882 (Fig. [S2](#fig:sqRT_PCR){reference-type="ref"}), suggesting that the insertion disrupted the gene. 
-The insertion was not found in the other three lines or low germination rate prevented further experiments. 
+In the other three lines, the insertion was not found or low germination rate prevented further experiments.  
 
 ### Laboratory experiments
 To observe plant growth, we cultivated ten replicates of the ribosomal gene mutant and the Col-0 wild type under a long-day condition (16h light/8h dark cycle at 22$^\circ$C/20$^\circ$C). 
@@ -122,7 +118,7 @@ For LMM and GLMM, we used the lmer and glmer function implemented in the lme4 pa
 # Results
 
 ## Field GWAS of the aphid abundance   
-To monitor aphid abundance as well as visible plant traits, we transplanted 196 *A. thaliana* accessions in the field. 
+To monitor aphid abundance as well as visible plant traits, we transplanted 196 *A. thaliana* accessions in the field in Zurich within a native distribution range of *A. thaliana*.  
 At the transplantation, all plants were at the rosette stage, i.e., no bolting occurred. 
 After two weeks, 38% of individual plants initiated bolting, i.e., a stem was observed. 
 The main herbivores were the two species of specialist aphids, *Lipaphis erysimi* and *Brevicoryne brassicae*. 
@@ -172,21 +168,20 @@ The data and codes are available at the GitHub repository (https://github.com/ya
 The published version is deposited on Zenodo or Dryad (doi::xxxxxx).    
 
 # Authors' contributions
-C.X.: laboratory investigation, project administration, data curation, draft writing; Y.S.: conceptualization, funding acquisition, project administration, supervision, field investigation, data curation, formal analysis, draft writing, review and editing; M.Y.: laboratory investigation, methodology (molecular), project administration, review and editing; M.A.B: resources (insects), review and editing; K.K.S.: conceptualization, funding acquisition, project administration, supervision, draft writing, review and editing.
+C.X.: laboratory investigation, project administration, data curation, draft writing, review and editing; Y.S.: conceptualization, funding acquisition, project administration, supervision, field investigation, data curation, formal analysis, draft writing, review and editing; M.Y.: laboratory investigation, methodology (molecular), project administration, review and editing; M.B.: laboratory investigation, methodology (molecular); M.A.B: resources (insects), review and editing; J.B.: conceptualization, funding acquisition, supervision, review and editing; K.K.S.: conceptualization, funding acquisition, project administration, supervision, draft writing, review and editing.
 
 # Competing interests  
 The authors declare no conflicts of interests concerning this study.  
 
 # Acknowledgements  
-The authors thank M. Brasser and R. Hostettler for their assistance with the molecular experiments; and L. Mohn, K.K. Thomsen, and all members of Shimizu group for their help with the establishment of field plots.  
+The authors thank L. Mohn, K.K. Thomsen, and all members of Shimizu group for their help with the establishment of field plots; and R. Hostettler for assistance with the molecular experiments.  
 
 # Funding
-This study was supported by the University of Zurich through the University Research Priority Program for "Global Change and Biodiversity" and Japan Science and Technology Agency (Grant numbers JPMJCR16O3 to KKS and JPMJPR17Q4 to YS).  
-
+This study was supported by the University of Zurich through the University Research Priority Program for “Global Change and Biodiversity”; Swiss National Science Foundation grant (31003A_182318 to K.K.S.); Japan Science and Technology Agency (Grant numbers JPMJCR16O3 to K.K.S. and JPMJPR17Q4 to Y.S.); and Japan Society for the Promotion of Science, Grant-in-Aid for Transformative Research Areas (22H05179 to K.K.S.).  
 
 # Figures 
 
-![Figure 1. Genome-wide association study of aphid abundance on 196 *Arabidopsis thaliana* accessions grown in the field. (A) A genomic region near the top-scoring SNP at Chr3-4579292 displays the position of candidate genes. Red colors highlight genes within 5 kbp from the focal SNP. Decimal numbers after the AGI code (e.g., ATxGxxxxx.y) represent splice variants of a single gene. (B) Manhattan plot shows the association score of -log~10~($p$) across five chromosomes of *A. thaliana* with MAF cut-off at 0.025. A horizontal dashed line indicates the genome-wide Bonferroni threshold at $p=0.05$.](../figures/fig1_comb.pdf){#fig:ManPlot}  
+![Figure 1. Genome-wide association study of aphid abundance on 196 *Arabidopsis thaliana* accessions grown in the field. (A) A genomic region within ca. 5 kbp from the top-scoring SNP at Chr3-4579292 displays the position of candidate genes. Only the longest splice variant (black horizontal arrow) is shown for each gene. (B) Manhattan plot shows the association score of -log~10~($p$) across five chromosomes of *A. thaliana* with MAF cut-off at 0.025. A horizontal dashed line indicates the genome-wide Bonferroni threshold at $p=0.05$.](../figures/fig1_comb.pdf){#fig:ManPlot}  
 
 ![Figure 2. The photograph (A), plant size (B), flowering time (C), and aphid abundance (D) of the Col-0 wild type (WT) and the ribosomal gene mutant (AT3G13882) of *Arabidopsis thaliana* under laboratory conditions. Flowering time and aphid abundance represents the number of days to flowering and log~2~(no. of aphids + 1), respectively. Asterisks indicate the statistical significance by generalized linear mixed models; ** $p<0.01$; *** $p<0.001$; **** $p<0.001$. Boxes: median with upper and lower quartile; Whiskers: 1.5 $\times$ inter-quartile range.](../figures/mutant.png){#fig:mutant}  
 
