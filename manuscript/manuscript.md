@@ -28,7 +28,7 @@ A no-choice assay with the turnip aphid, _Lipaphis erysimi_, found that aphids w
 
 # Introduction
 Plants are attacked by herbivores across their life cycle in natural environments. 
-While chemical and physical traits have long been the main focus of anti-herbivore defense [@schoonhoven2005insect; @kessler2004silencing; @schuman2015plant; @sato2019plant], plant life-history traits also account for herbivory variation in field environments [@carmona2011plant; @schuman2015plant; @barton2017future].
+While chemical and physical traits have long been the main focus of anti-herbivore resistance [@schoonhoven2005insect; @kessler2004silencing; @schuman2015plant; @sato2019plant], plant life-history traits also account for herbivory variation in field environments [@carmona2011plant; @schuman2015plant; @barton2017future].
 For example, phenological changes (e.g., early flowering) can allow plants to escape from seasonal herbivory [@kawagoe2010escape; @marquis2021escape]. 
 The visibility of plants for herbivores, namely plant apparency [@feeny1976plant], also changes across plant ontogeny (e.g., from vegetative to reproductive phase), which alters the risk of herbivore attacks [@zverev2017ontogenetic; @barton2017future]. 
 By focusing on genetic variation within a plant species, several studies have shown that plant phenological and architectural traits shape heritable variation in herbivory [@johnson2009heritability; @barbour2015multiple; @sato2019plant].
@@ -86,8 +86,17 @@ To inspect organ-specific expression levels of candidate genes, we referred to K
 ### *Arabidopsis thaliana* mutants
 T-DNA sequence-indexed lines of *A. thaliana* were obtained from the Nottingham Arabidopsis Stock Centre (NASC) (https://arabidopsis.info/). 
 In addition to Columbia-0 (Col-0, NASC Accession ID: N70000) wild type, we ordered four mutant lines for a ribosomal gene (AT3G13882) (Table S2). 
-These original mutants were back-crossed to the Col-0 wild type three times.
-Following the instruction [@o2015user], we examined the insertion site by polymerase chain reaction (PCR) amplification and Sanger sequencing; and gene expression levels by Semi-quantitative reverse transcription and PCR (sqRT-PCR) (see captions of Fig. [S1](#fig:tDNA){reference-type="ref"} and Fig. [S2](#fig:sqRT_PCR){reference-type="ref"} for details). 
+These original mutants were back-crossed to the Col-0 wild type three times.  
+
+Following the instruction [@o2015user], we examined the insertion site by polymerase chain reaction (PCR) amplification and Sanger sequencing; and gene expression levels by Semi-quantitative reverse transcription and PCR (sqRT-PCR).
+To confirm the T-DNA insertion site of SALK_039481, we extracted DNA from leaves using the CTAB method. We then amplified the DNA by polymerase chain reaction (PCR) as follows: 2 min at 95$^\circ$C; 35 cycles of 15 s at 95$^\circ$C, 30 s at 55$^\circ$C, 1.5 min at 72$^\circ$C; and a final extension step of 3 min at 72$^\circ$C. The PCR product was finally sequenced by Sanger sequencing to confirm the insertion site.  
+
+To perform sqRT-PCR, we extracted the RNA from leaves using RNeasy kit (Qiagen: Catalogue Number: 74181) and purified the RNA with DNA-free kit (Ambion: Cat. No. AM1906). 
+RNA concentration was measured by Qubit spectrophotometer (Invitrogen: Cat. No. Q10211). 
+Then we obtained the cDNA using High-Capacity RNA-to-cDNA kit (Applied Biosystems: Cat. No. 4387406) from 500 ng of the total RNA. 
+The cDNA was amplified by PCR as follows: 3 min at 95$^\circ$C; 28 cycles of 15 s at 95$^\circ$C, 30 s at 55$^\circ$C, 1 min at 72$^\circ$C; and a final extension step of 5 min at 72$^\circ$C.
+A gel electrophoresis was performed using a 1\% agarose with 120 V for 60 min. The PCR products were finally visualized an UV trans-illuminator system.  
+
 We found that one of the four lines, the SALK_039481 (NASC Accession ID: N670586), indeed had a T-DNA insertion on an exon of one of two splice variants (Fig. [S1](#fig:tDNA){reference-type="ref"}) and reduced expression level of AT3G13882 (Fig. [S2](#fig:sqRT_PCR){reference-type="ref"}), suggesting that the insertion disrupted the gene. 
 In the other three lines, the insertion was not found or low germination rate prevented further experiments.  
 
@@ -115,10 +124,10 @@ An analysis of deviance with a $F$-test was used to test the significance of the
 All statistical analyses were performed using R version 4.0.3 [@Rcite]. 
 For LMM and GLMM, we used the lmer and glmer function implemented in the lme4 package [@lme4].
 
-# Results
+# Results and Discussion
 
 ## Field GWAS of the aphid abundance   
-To monitor aphid abundance as well as visible plant traits, we transplanted 196 *A. thaliana* accessions in the field in Zurich within a native distribution range of *A. thaliana*.  
+To monitor aphid abundance as well as visible plant traits, we transplanted 196 *A. thaliana* accessions in the field in Zurich within a native distribution range of *A. thaliana*.
 At the transplantation, all plants were at the rosette stage, i.e., no bolting occurred. 
 After two weeks, 38% of individual plants initiated bolting, i.e., a stem was observed. 
 The main herbivores were the two species of specialist aphids, *Lipaphis erysimi* and *Brevicoryne brassicae*. 
@@ -144,7 +153,6 @@ The slower growth and delayed flowering of the ribosomal gene mutant led us to t
 Then, to examine colony establishment after aphid colonization, we released wingless individuals of *Lipaphis erysimi* on rosette plants of the ribosomal gene mutant (AT3G13882) and the wild type. 
 We observed a reduced number of aphids on the AT3G13882 mutant compared to the wild type at 7, 10, 14 days after the release of aphids ($F_{1,9}=19.3, p=0.0017$ at 7 days; Fig. [2](#fig:mutant){reference-type="ref"}D: see also Fig. [S5](#fig:aphid_stat){reference-type="ref"} for results at 10 and 14 days), suggesting that the delayed growth of the host negatively affected aphid colony establishment.  
 
-# Discussion
 While ribosomal genes have long been considered housekeeping genes of the protein synthesis machinery, mutants of ribosome-related genes exhibit a wide variety of growth and reproductive phenotypes. 
 For example, previous studies reported the reduction of leaf cell number [@fujikura2009coordination], reduced root length [@creff2010two], and the reduction of pollen number [@tsuchimatsu2020adaptive; @kakui2022pollen] regarding ribosomal gene mutations.
 In this context, our findings from the ribosomal gene AT3G13882 add insights into biotic interactions besides growth deterioration. 
@@ -155,6 +163,7 @@ Natural alleles of *RDP1* could alleviate pleiotropic growth defects [@tsuchimat
 In our study, the other growth-related genes or other mutations of AT3G13882 might have reduced the aphid abundance. 
 Because transgenic approaches may not be effective to identify mutation sites affecting quantitative traits, further experimental tests, such as quantitative complementation [@tsuchimatsu2020adaptive; @kakui2022pollen], will be needed to identify natural causal variants that alter aphid abundance through delayed growth.  
 
+# Conclusion
 Overall, our study suggests the importance of plant life-history traits in altering herbivore abundance. 
 Previous field studies used mutant plants to illustrate *in natura* roles of well-studied functional genes in chemical defense (e.g., *LOX*s in *Nicotiana attenuata* [@kessler2004silencing; @schuman2015plant]) and physical defense (*GLABRA1* in *A. thaliana* [@sato2019plant]) against herbivores. 
 In contrast, field GWAS offered a hypothesis-free approach to screen candidate genes responsible for herbivore abundance [@barker2019linking].
@@ -164,8 +173,7 @@ Our candidate genes might also exhibit pleiotropy on plant growth and secondary 
 Since aphids and aphidophagous insects are widespread across terrestrial ecosystems [@dixon1977aphid; @snyder2003interactions], future studies may reveal cascading effects of delayed plant growth on food webs.
 
 # Data availability  
-The data and codes are available at the GitHub repository (https://github.com/yassato/AraAphidGWAS). 
-The published version is deposited on Zenodo or Dryad (doi::xxxxxx).    
+The data and codes are available at the GitHub repository (https://github.com/yassato/AraAphidGWAS) and its published version is deposited on Dryad (doi::xxxxxx).    
 
 # Authors' contributions
 C.X.: laboratory investigation, project administration, data curation, draft writing, review and editing; Y.S.: conceptualization, funding acquisition, project administration, supervision, field investigation, data curation, formal analysis, draft writing, review and editing; M.Y.: laboratory investigation, methodology (molecular), project administration, review and editing; M.B.: laboratory investigation, methodology (molecular); M.A.B: resources (insects), review and editing; J.B.: conceptualization, funding acquisition, supervision, review and editing; K.K.S.: conceptualization, funding acquisition, project administration, supervision, draft writing, review and editing.
@@ -188,9 +196,9 @@ This study was supported by the University of Zurich through the University Rese
 
 # Supplementary Materials  
 
-![Figure S1. Schematic structure of the ribosomal gene AT3G13882. Green boxes: mRNA for two splice variants; triangle: the position of Transfer-DNA (T-DNA) insersion; red arrrows: primers for checking the T-DNA insertion. The primer IDs shown by four digits (oXXXX) correspond to those listed in Table S3. We downloaded the annotations from Genbank (Gene ID: 3768810), and visualized the position of the gene and primers using QIAGEN CLC Main Workbench. To confirm the T-DNA insertion site of SALK_039481, we extracted DNA from leaves using the CTAB method. We then amplified the DNA by polymerase chain reaction (PCR) as follows: 2 min at 95$^\circ$C; 35 cycles of 15 s at 95$^\circ$C, 30 s at 55$^\circ$C, 1.5 min at 72$^\circ$C; and a final extension step of 3 min at 72$^\circ$C. The PCR product was finally sequenced by Sanger sequencing to confirm the insertion site.](../figures/AT3G13882.pdf){#fig:tDNA}  
+![Figure S1. Schematic structure of the ribosomal gene AT3G13882. Green boxes: mRNA for two splice variants; triangle: the position of Transfer-DNA (T-DNA) insersion; red arrrows: primers for checking the T-DNA insertion. The primer IDs shown by four digits (oXXXX) correspond to those listed in Table S3. We downloaded the annotations from Genbank (Gene ID: 3768810), and visualized the position of the gene and primers using QIAGEN CLC Main Workbench.](../figures/AT3G13882.pdf){#fig:tDNA}  
 
-![Figure S2. Semi-quantitative reverse transcription and polymerase chain reaction (sqRT-PCR) of the ribosomal gene mutant mutant AT3G13882 (SALK_039481). To perform sqRT-PCR, we extracted the RNA from leaves using RNeasy kit (Qiagen: Catalogue Number: 74181) and purified the RNA with DNA-free kit (Ambion: Cat. No. AM1906). RNA concentration was measured by Qubit spectrophotometer (Invitrogen: Cat. No. Q10211). Then we obtained the cDNA using High-Capacity RNA-to-cDNA kit (Applied Biosystems: Cat. No. 4387406) from 500 ng of the total RNA. The cDNA was amplified by PCR as follows: 3 min at 95$^\circ$C; 28 cycles of 15 s at 95$^\circ$C, 30 s at 55$^\circ$C, 1 min at 72$^\circ$C; and a final extension step of 5 min at 72$^\circ$C. A gel electrophoresis was performed using a 1\% agarose with 120 V for 60 min. The PCR products were finally visualized an UV trans-illuminator system. Two primer sets A-D were used for AT3G13882; and E for an internal control gene *ETL1* (see Table S4 for the primer information). This figure shows that the gene expression of AT3G13882 is suppressed in the mutant line SALK_039481.](../figures/FigS_gel_annotation.tiff){#fig:sqRT_PCR}  
+![Figure S2. Semi-quantitative reverse transcription and polymerase chain reaction (sqRT-PCR) of the ribosomal gene mutant mutant AT3G13882 (SALK_039481). Two primer sets A-D were used for AT3G13882; and E for an internal control gene *ETL1* (see Table S4 for the primer information). This figure shows that the gene expression of AT3G13882 is suppressed in the mutant line SALK_039481.](../figures/FigS_gel_annotation.tiff){#fig:sqRT_PCR}  
 
 ![Figure S3. Temporal patterns of the emergence of wingless and winged aphids during the field GWAS experiment. X-axes show the number of winged (top row) or wingless (bottom row) aphids at current monitoring day (t=year-month-day). Y-axes show the total number of both winged and wingless aphids at the next monitoring date (t+1). A single point corresponds to an individual plant. The number of aphids represents the total number of individuals of both *Lipaphis erysimi* and *Brevicoryne brassicae*.](../figures/aphid_No_per_day.png){#fig:aphid_day}  
 
