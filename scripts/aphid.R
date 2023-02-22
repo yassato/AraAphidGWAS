@@ -7,6 +7,7 @@ AphidsNo <- read.delim("./data/AphidsNo.txt")
 AphidsNo$Mutant <-factor(AphidsNo$Mutant,levels=c('AT3G13882','WT'))
 
 library(lme4)
+# add offset=log(size) or offset=log(flowering) to glmer when introducing an offset term
 res = glmer(t2~Mutant+(1|No.),data=AphidsNo,family="poisson",control=glmerControl(optimizer="bobyqa"))
 summary(res)
 anova(res)

@@ -1,7 +1,13 @@
 # check phenotypes
-pheno = read.csv("./data/20220301_AtZurich2018aphidsGWAp.csv",header=TRUE)
+pheno = read.csv("./data/AtZurich2018aphidsGWAportal_data.csv",header=TRUE)
 aggregate(log_BbLe_max~Bolting,data=pheno,mean)
 t.test(log_BbLe_max~Bolting,data=pheno)
+
+resid_size = resid(lm(log_BbLe_max~InitLeafLen,data=pheno))
+resid_bolting = resid(lm(log_BbLe_max~Bolting,data=pheno))
+
+pheno = data.frame(pheno,resid_size,resid_bolting)
+pheno = write.csv(pheno,"./data/AtZurich2018aphidsGWAportal.csv",row.names=FALSE)
 
 # % of bolted plants
 sum(pheno$Bolting) / nrow(pheno)
@@ -66,9 +72,6 @@ nrow(out)
 # cut-off by MAF
 out = out[out$maf>0.025,]
 nrow(out)
-saveRDS(out,file="./data/log_BbLe_max_23338_pvals_MAFcut.rds",compress=TRUE,version=2)
-
-out = readRDS("./data/log_BbLe_max_23338_pvals_MAFcut.rds")
 
 #########
 # plots
@@ -89,3 +92,38 @@ png("./figures/log_BbLe_max_QQ.png",width=4,height=4,res=220,units="in")
 par(mai=c(1,1,0.25,0.25),bg=NA)
 qqplot.pvalues(p=10^(-out$score),las=1,main="")
 dev.off()
+
+###############
+# checking p-values of chr3-4579292 for other traits
+
+manplot = function(fname) {
+  out = read.csv(fname,header=TRUE)
+  print(fname)
+  print(subset(out,chr=="3"&pos=="4579292"))
+  out = out[out$maf>0.025,]
+  x = data.frame(out[,1:3])
+  x$score = 10^(-x$score)
+  colnames(x)[3] = "p"
+  gaston::manhattan(x, las=1)
+  abline(h = -log10(0.05/nrow(x)),lty=2,col="grey")
+  return(NULL)
+}
+
+png("./figures/supp_Man.png",width=6,height=9,res=300,units="in")
+par(mai=c(1,1,0.25,0.25),bg=NA)
+par(mfrow=c(4,1))
+manplot("./data/log_BbLe_max_23338_pvals.csv.gz")
+manplot("./data/BoltingAMM_42396_pvals.csv.gz") # bolting GWAS
+manplot("./data/resid_bolting_42399_pvals.csv.gz") # residuals of log_BbLe_max corrected by bolting
+manplot("./data/resid_size_42400_pvals.csv.gz") # residuals of log_BbLe_max corrected by initial size
+dev.off()
+
+
+out = read.csv("./data/resid_size_42400_pvals.csv.gz",header=TRUE)
+subset(out,chr=="3"&pos=="4579292")
+
+out = read.csv("./data/resid_bolting_42399_pvals.csv.gz",header=TRUE)
+subset(out,chr=="3"&pos=="4579292")
+
+out = read.csv("./data/BoltingAMM_42396_pvals.csv.gz",header=TRUE)
+subset(out,chr=="3"&pos=="4579292")

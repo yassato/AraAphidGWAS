@@ -1,5 +1,5 @@
 ---
-title: Genome-wide association study highlights escape from aphids by delayed growth in *Arabidopsis thaliana*
+title: Genome-wide association study suggests potential effects of plant apparency on the initial colonization of aphids in *Arabidopsis thaliana*
 output:
   word_document: default
   pdf_document: default
@@ -19,20 +19,21 @@ csl: proceedings-of-the-royal-society-b.csl
 ^\*^ *Co-correspondence; Y.S. (yasuhiro.sato@uzh.ch); K.K.S. (kentaro.shimizu@uzh.ch)*  
 
 # Abstract  
-Field studies have shown that plant phenological and architectural traits often explain substantial variation in herbivory.
-Although plant genes involved in physical and chemical defense are well studied, less is known about the genetic basis underlying effects of plant growth traits on herbivory. 
+Plant size, height, and other architectural traits, collectively called 'plant apparency', determine plant's visibility and consequent probability of being colonized by herbivores.
+Although plant genes involved in physical and chemical defense are well studied in herbivory, less is known about the genetic basis underlying effects of plant apparency on herbivore colonization. 
 Here, we conducted a genome-wide association study (GWAS) of aphid abundance in a field population of *Arabidopsis thaliana*. 
-This field GWAS detected a significant peak on the third chromosome of *A. thaliana*. 
-Out of candidate genes near this significant genomic region, a mutant of a ribosomal gene (AT3G13882) exhibited slower growth and later flowering than a wild type under laboratory conditions. 
-A no-choice assay with the turnip aphid, _Lipaphis erysimi_, found that aphids were unable to successfully establish on the mutant. These findings suggest the potential role of growth-related genes in altering herbivore abundance.
+This GWAS of aphid abundance detected a rare but significant SNP variant on the third chromosome of *A. thaliana*, which was also partly associated with the presence or absence of inflorescence. 
+Out of candidate genes near this significant SNP, a mutant of a ribosomal gene (AT3G13882) exhibited slower growth and later flowering than a wild type under laboratory conditions.
+A no-choice assay with the turnip aphid, _Lipaphis erysimi_, found that aphids were unable to successfully establish on the mutant.
+These findings suggest that genes relevant to plant apparency might underpin aphid colonization in the field.
 
 # Introduction
 Plants are attacked by herbivores across their life cycle in natural environments. 
-While chemical and physical traits have long been the main focus of anti-herbivore resistance [@schoonhoven2005insect; @kessler2004silencing; @schuman2015plant; @sato2019plant], plant life-history traits also account for herbivory variation in field environments [@carmona2011plant; @schuman2015plant; @barton2017future].
-For example, phenological changes (e.g., early flowering) can allow plants to escape from seasonal herbivory [@kawagoe2010escape; @marquis2021escape]. 
-The visibility of plants for herbivores, namely plant apparency [@feeny1976plant], also changes across plant ontogeny (e.g., from vegetative to reproductive phase), which alters the risk of herbivore attacks [@zverev2017ontogenetic; @barton2017future]. 
-By focusing on genetic variation within a plant species, several studies have shown that plant phenological and architectural traits shape heritable variation in herbivory [@johnson2009heritability; @barbour2015multiple; @sato2019plant].
-Yet, less is known about the underlying genetic basis of the plant life-history traits on herbivory.  
+While chemical and physical traits have long been the main focus of anti-herbivore resistance [@schoonhoven2005insect; @kessler2004silencing; @schuman2015plant; @sato2019plant], plant life-history traits also account for herbivory variation in field environments [@carmona2011plant; @barton2017future].
+For example, plant size, height, and the other architectural traits often shape plants' visibility for herbivores [@zverev2017ontogenetic; @higuchi2019leaf].
+The set of visible traits, collectively called plant apparency [@feeny1976plant], changes from vegetative to reproductive stage [@barton2017future] and thereby affect the probability of being harbored by herbivores [@kawagoe2010escape; @marquis2021escape].
+By focusing on genetic variation within a plant species, several studies have shown that plant architectural traits shape heritable variation in herbivore abundance and community composition [@johnson2009heritability; @barbour2015multiple; @sato2019plant].
+Yet, less is known about the underlying genetic basis of the plant apparency on herbivore colonization.  
 
 Genome-wide association study (GWAS) is an effective way to dissect the genetic architecture of ecologically important traits [@santure2018wild; @barker2019linking]. 
 Through associations between single nucleotide polymorphisms (SNPs) and traits, GWAS provides a hypothesis-free approach to identify novel genes from natural phenotypic variation [@fujii2019stigmatic; @tsuchimatsu2020adaptive]. 
@@ -44,9 +45,9 @@ To achieve this goal, it is important to conduct GWAS under field conditions.
 While *A. thaliana* usually blooms in spring after over-wintering, some cohorts have overlapping life cycles from spring to autumn [@thompson1994spatiotemporal; @taylor2017interacting; @stockenhuber2021uv].
 When *A. thaliana* plants emerge from late spring to early summer, they are threatened by various herbivores [@mosleh2009herbivory; @sato2019plant]. 
 Of the diverse insect herbivores, aphids are known to be major herbivores occurring across the natural distribution range of *A. thaliana* [@zust2012natural]. 
-Because aphids often suck phloem sap from leaf veins and flowering stems, we hypothesized that plant life-history traits may play a key role in mediating aphid herbivory under field conditions.  
+Because aphids often suck phloem sap from leaf veins and flowering stems, we hypothesized that plant apparency may play a key role in harboring aphids under field conditions.  
 
-To reveal the genetic architecture of aphid herbivory, we combined GWAS with a mutant analysis in *A. thaliana*. 
+To reveal the genetic architecture of aphid abundance, we combined GWAS with a mutant analysis in *A. thaliana*. 
 We first conducted GWAS of aphid abundance on 196 *A. thaliana* accessions grown in a field site in Zurich, Switzerland. 
 To further test candidate genes, we then cultivated and released the turnip aphid *Lipaphis erysimi* on *A. thaliana* mutants.  
 
@@ -124,7 +125,7 @@ An analysis of deviance with a $F$-test was used to test the significance of the
 All statistical analyses were performed using R version 4.0.3 [@Rcite]. 
 For LMM and GLMM, we used the lmer and glmer function implemented in the lme4 package [@lme4].
 
-# Results and Discussion
+# Results
 
 ## Field GWAS of the aphid abundance   
 To monitor aphid abundance as well as visible plant traits, we transplanted 196 *A. thaliana* accessions in the field in Zurich within a native distribution range of *A. thaliana*.
@@ -138,8 +139,17 @@ This observation suggests that colonized aphids do not always establish a colony
 
 To reveal genetic architecture underlying variation in aphid abundance, we calculated heritability and then performed association mapping. 
 Aphid abundance had high heritability among the plant accessions ($h^2 = 0.7$), indicating the genetic control of this trait. 
-Our mapping also detected a significant SNP in an intergenic region above the genome-wide Bonferroni threshold (chr3-4579292, $p<10^{-8}$,  MAF=0.026: Fig. [1](#fig:ManPlot){reference-type="ref"}; see also Fig. [S4](#fig:qqplot){reference-type="ref"} for quantile-quantile plots). 
-Nearby this significant SNP (chr3-4579292), we found three candidate genes: such as a putative ribosomal gene (AT3G13882) that is homologous to a ribosome protein L34 gene (RPL34) [@cheng2017araport11], *EPIDERMAL PATTERNING FACTOR LIKE 3* (*EPFL3*: AT3G13898), and *MYB26*. 
+Our mapping also detected a significant SNP in an intergenic region above the genome-wide Bonferroni threshold (chr3-4579292, $p<10^{-8}$,  MAF=0.026: Fig. [1](#fig:ManPlot){reference-type="ref"}; see also Fig. [S4](#fig:qqplot){reference-type="ref"} for quantile-quantile plots).
+This top-scoring SNP was also associated with the bolting to non-significant but strong extent (-log~10~(p)=5.26; Fig. SX).
+The significance of chr3-4579292 turned smaller but remained at -log~10~(p)=6.40 when we adjusted the effects of bolting on aphid abundance, indicating the partial contribution of the bolting to shaping the significant association between chr3-4579292 SNP and aphid abundance.
+In contrast, chr3-4579292 remained significant (-log~10~(p)=8.77) when we adjusted the effects of initial plant size on aphid abundance.
+This weak influence of the initial size was plausible because plants were grown in a laboratory before field experiment to minimize variation in their initial size.
+The line of GWAS analyses suggests that the SNP at chr3-4579292 was significantly associated with aphid abundance through its potential influence on flowering.  
+
+To narrow down candidate genes, we further focused on genomic region near the significant SNP at chr3-4579292.
+Five out of the 196 accessions carried a rare allele increasing aphid abundance, while the other accessions have major alleles (Figure SXa).
+Genome sequences of four of the five rare accessions are available in the 1001 Genome Project, where three of the four available accessions shared similar patterns near chr3-4579292 but differed from major accessions (Figure SXb).
+Three candidate genes were located nearest to the chr3-4579292, such as a putative ribosomal gene (AT3G13882) that is homologous to a ribosome protein L34 gene (RPL34) [@cheng2017araport11], *EPIDERMAL PATTERNING FACTOR LIKE 3* (*EPFL3*: AT3G13898), and *MYB26*. 
 Out of these three genes, the ribosomal gene (AT3G13882) is known to be highly expressed in vegetative organs such as leaves [@klepikova2016high]. 
 The other two genes, *EPFL3* and *MYB26*, are highly expressed only in reproductive organs such as anthers or pistils [@klepikova2016high]. 
 Because aphids were unlikely to suck saps from anthers and pistils, we focused on the ribosomal gene (AT3G13882) for further investigation.  
@@ -151,20 +161,33 @@ The flowering time of the AT3G13882 mutant was also significantly later than the
 The slower growth and delayed flowering of the ribosomal gene mutant led us to test whether the delayed growth could prevent the establishment of aphid colonies after colonization.  
 
 Then, to examine colony establishment after aphid colonization, we released wingless individuals of *Lipaphis erysimi* on rosette plants of the ribosomal gene mutant (AT3G13882) and the wild type. 
-We observed a reduced number of aphids on the AT3G13882 mutant compared to the wild type at 7, 10, 14 days after the release of aphids ($F_{1,9}=19.3, p=0.0017$ at 7 days; Fig. [2](#fig:mutant){reference-type="ref"}D: see also Fig. [S5](#fig:aphid_stat){reference-type="ref"} for results at 10 and 14 days), suggesting that the delayed growth of the host negatively affected aphid colony establishment.  
+We observed a reduced number of aphids on the AT3G13882 mutant compared to the wild type at 7, 10, 14 days after the release of aphids ($F_{1,9}=19.3, p=0.0017$ at 7 days; Fig. [2](#fig:mutant){reference-type="ref"}D: see also Fig. [S5](#fig:aphid_stat){reference-type="ref"} for results at 10 and 14 days), suggesting that the delayed growth of the host negatively affected aphid colony establishment.
+We also incorporated the plant size or flowering time as an offset term in GLMMs to examine their confounding influence on aphid abundance.
+When the plant size was offset, the number of aphids less significantly differed between the wild type and mutant (Table SX). When the flowering time was offset, the number of aphids more significantly differed between the wild type and mutant (Table SX).
+These additional analyses support the observational evidence that delayed growth and flowering of the mutant plant results in less successful establishment of aphid colony than the wild type.  
 
-While ribosomal genes have long been considered housekeeping genes of the protein synthesis machinery, mutants of ribosome-related genes exhibit a wide variety of growth and reproductive phenotypes. 
+# Discussion
+Guided by the field GWAS of aphid abundance, we discovered a mutant plant that exhibited slower growth and harbored fewer aphids in _A. thaliana_. While ribosomal genes have long been considered housekeeping genes of the protein synthesis machinery, mutants of ribosome-related genes exhibit a wide variety of growth and reproductive phenotypes. 
 For example, previous studies reported the reduction of leaf cell number [@fujikura2009coordination], reduced root length [@creff2010two], and the reduction of pollen number [@tsuchimatsu2020adaptive; @kakui2022pollen] regarding ribosomal gene mutations.
-In this context, our findings from the ribosomal gene AT3G13882 add insights into biotic interactions besides growth deterioration. 
-We should note that further study on natural variants responsible for the delayed growth and reduced aphid abundance would be necessary to support its significance in the field. 
+In this context, our findings from the ribosomal gene AT3G13882 add insights into biotic interactions besides growth deterioration.  
+
+We should note, however, that further study on natural variants responsible for the delayed growth and reduced aphid abundance would be necessary to validate its importance in the field. 
 Multiple alleles on the AT3G13882 gene are also needed to provide strong evidence of those phenotypes. 
 In the studies of a ribosomal gene *REDUCED POLLEN NUMBER1* (*RDP1*), null mutants showed a pleiotropic effect on plant growth and pollen number in *A. thaliana* [@tsuchimatsu2020adaptive; @kakui2022pollen]. 
 Natural alleles of *RDP1* could alleviate pleiotropic growth defects [@tsuchimatsu2020adaptive]. 
 In our study, the other growth-related genes or other mutations of AT3G13882 might have reduced the aphid abundance. 
-Because transgenic approaches may not be effective to identify mutation sites affecting quantitative traits, further experimental tests, such as quantitative complementation [@tsuchimatsu2020adaptive; @kakui2022pollen], will be needed to identify natural causal variants that alter aphid abundance through delayed growth.  
+Because transgenic approaches may not be effective to identify mutation sites affecting quantitative traits, natural alleles needs to be created using genomic editing first and then exchanged between natural accessions by crossing,
+Such quantitative complementation tests [@tsuchimatsu2020adaptive; @kakui2022pollen] will be needed to identify natural causal variants that alter aphid abundance through delayed growth.  
 
-# Conclusion
-Overall, our study suggests the importance of plant life-history traits in altering herbivore abundance. 
+Discovery of flowering-associated loci is sometimes of main interests in GWAS, but other times conceals net genetic effects on other complex traits of interests [@hori2012variation; @onogi2016uncovering]. 
+Our GWAS of aphid abundance unexpectedly led us to detect a significant rare variant that was also partially associated with the bolting.
+By ruling out the plant size and flowering time as confounding factors, we were able to detect substantial contributions of plant apparency to aphid abundance.
+This finding does not necessarily indicates the irrelevance of chemical and physical defense traits to herbivore colonization.
+Although our top-scoring SNP did not match known GWAS peaks of glucosinolates [@brachi2015coselected], it was still possible that secondary metabolites and volatile-mediated defense signaling were more influential on aphid colonization.
+While plant apparency can alter the initial colonization of aphids in _A. thaliana_, its long-term consequence on plant defense and resultant fitness remains unknown.
+Further studies on fitness consequence besides the identification of natural causal variants would be needed to verify ecological impacts of a single-gene on plant-herbivore interactions.  
+
+Overall, our study suggests the potential importance of genetically based plant apparency in altering herbivore abundance.
 Previous field studies used mutant plants to illustrate *in natura* roles of well-studied functional genes in chemical defense (e.g., *LOX*s in *Nicotiana attenuata* [@kessler2004silencing; @schuman2015plant]) and physical defense (*GLABRA1* in *A. thaliana* [@sato2019plant]) against herbivores. 
 In contrast, field GWAS offered a hypothesis-free approach to screen candidate genes responsible for herbivore abundance [@barker2019linking].
 These lines of studies suggest that plant genetic variation governs herbivore abundance and communities [@johnson2009heritability; @barbour2015multiple; @sato2019plant; @barker2019linking], but a keystone gene shaping the ecological communities was not identified until recently [@barbour2022keystone]. 
