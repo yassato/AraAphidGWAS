@@ -31,7 +31,7 @@ These findings suggest that genes relevant to plant apparency might underpin aph
 Plants are attacked by herbivores across their life cycle in natural environments. 
 While chemical and physical traits have long been the main focus of anti-herbivore resistance [@schoonhoven2005insect; @kessler2004silencing; @schuman2015plant; @sato2019plant], plant life-history traits also account for herbivory variation in field environments [@carmona2011plant; @barton2017future].
 For example, plant size, height, and the other architectural traits often shape plants' visibility for herbivores [@zverev2017ontogenetic; @higuchi2019leaf].
-The set of visible traits, collectively called plant apparency [@feeny1976plant], changes from vegetative to reproductive stage [@barton2017future] and thereby affect the probability of being harbored by herbivores [@kawagoe2010escape; @marquis2021escape].
+These sets of visible traits, collectively called plant apparency [@feeny1976plant], changes across ontogeny from vegetative to reproductive stage [@barton2017future] and thereby affect the probability of being harbored by herbivores [@kawagoe2010escape; @marquis2021escape].
 By focusing on genetic variation within a plant species, several studies have shown that plant architectural traits shape heritable variation in herbivore abundance and community composition [@johnson2009heritability; @barbour2015multiple; @sato2019plant].
 Yet, less is known about the underlying genetic basis of the plant apparency on herbivore colonization.  
 
@@ -68,19 +68,23 @@ To keep all the accessions in the rosette stage at the start of the field experi
 Seeds were sown on 33-mm diameter Jiffy-seven^(R)^ pots and stratified under a constant dark 4$^\circ$C condition for a week. Seedlings were cultivated in a growth chamber for 6 weeks under the short-day condition. 
 Plants grown on the Jiffy-seven pots were then planted in a new plastic pot filled with mixed soils of agricultural composts (Profi Substrat Classic CL ED73, Einheitserde Co.) and perlites with compost to perlite ratio of 3:1 litter volume. 
 Eight replicates of the 196 accessions were then transferred to the outdoor garden at the University of Zurich-Irchel (47$^\circ$ 23'N, 8$^\circ$ 33'E). 
-Aphids were counted by a single observer every two or three days. 
+Aphids were identified and counted by a single observer (Y. Sato) every two or three days.
+The two species of specialist aphids, *Lipaphis erysimi* and *Brevicoryne brassicae*, were identified based on the presence or absence of waxy compounds on their abdomen. 
+These two species can be distinguished from the generalist aphid _Myzus persicae_ based on the length of cornicules, though _M. persicae_ did not occur during the present field experiment. 
 To examine whether the aphid abundance differed between plants with and without flowering stems, we also recorded the presence or absence of bolting two weeks after the start of field experiment.
 
 
 ### Data analysis  
 All GWAS analyses were performed using the GWA-portal (https://gwas.gmi.oeaw.ac.at) [@seren2018gwa]. 
-The target phenotype was the maximum number of aphids, which included *Lipaphis erysimi* and *Brevicoryne brassicae* (see Results), observed on a plant during the experiment.
-The imputed full-sequence dataset [@seren2018gwa] was used as SNP data for the 196 accessions.
+The imputed full-sequence dataset [@seren2018gwa; @togninalli_aragwas_2018] was used as SNP data for the 196 accessions, which provided combined SNP data imputed between 250k SNP chip genotyping by the RegMap project [@horton_genome-wide_2012] and high-throughput sequencing by the 1001 Genome Project [@alonso-blanco_1135_2016]
 Pseudo-heritability $h^2$ [@seren2018gwa] was calculated for the target phenotype before association mapping. 
 Accelerated mixed models [@seren2018gwa] were used for association mapping with a correction of kinship structure.
-The number of aphids was ln($x+1$)-transformed to improve normality. 
 After the association mapping, candidate genes were searched within ca. 5 kb near a focal SNP. 
 To inspect organ-specific expression levels of candidate genes, we referred to Klepikova Arabidopsis Atlas [@klepikova2016high] via The Arabidopsis Information Resource (<https://www.arabidopsis.org/>).  
+
+We analyzed aphid abundance as well as the other three traits as the target phenotype in the GWA-portal. 
+The aphid abundance was quantified as the maximum number of aphids, which included *Lipaphis erysimi* and *Brevicoryne brassicae* (see Results), observed on a plant during the experiment.
+The number of aphids was ln($x+1$)-transformed to improve normality.  
 
 ## Mutant analysis  
 
@@ -148,7 +152,7 @@ The line of GWAS analyses suggests that the SNP at chr3-4579292 was significantl
 
 To narrow down candidate genes, we further focused on genomic region near the significant SNP at chr3-4579292.
 Five out of the 196 accessions carried a rare allele increasing aphid abundance, while the other accessions have major alleles (Figure SXa).
-Genome sequences of four of the five rare accessions are available in the 1001 Genome Project, where three of the four available accessions shared similar patterns near chr3-4579292 but differed from major accessions (Figure SXb).
+Genome sequences of four (line V, X, Y, and Z) of the five rare accessions are available in the 1001 Genome Project [@alonso-blanco_1135_2016], where three (line V, X, and Y) of the four available accessions shared similar patterns near chr3-4579292 but differed from major accessions (Figure SXb).
 Three candidate genes were located nearest to the chr3-4579292, such as a putative ribosomal gene (AT3G13882) that is homologous to a ribosome protein L34 gene (RPL34) [@cheng2017araport11], *EPIDERMAL PATTERNING FACTOR LIKE 3* (*EPFL3*: AT3G13898), and *MYB26*. 
 Out of these three genes, the ribosomal gene (AT3G13882) is known to be highly expressed in vegetative organs such as leaves [@klepikova2016high]. 
 The other two genes, *EPFL3* and *MYB26*, are highly expressed only in reproductive organs such as anthers or pistils [@klepikova2016high]. 
@@ -163,7 +167,8 @@ The slower growth and delayed flowering of the ribosomal gene mutant led us to t
 Then, to examine colony establishment after aphid colonization, we released wingless individuals of *Lipaphis erysimi* on rosette plants of the ribosomal gene mutant (AT3G13882) and the wild type. 
 We observed a reduced number of aphids on the AT3G13882 mutant compared to the wild type at 7, 10, 14 days after the release of aphids ($F_{1,9}=19.3, p=0.0017$ at 7 days; Fig. [2](#fig:mutant){reference-type="ref"}D: see also Fig. [S5](#fig:aphid_stat){reference-type="ref"} for results at 10 and 14 days), suggesting that the delayed growth of the host negatively affected aphid colony establishment.
 We also incorporated the plant size or flowering time as an offset term in GLMMs to examine their confounding influence on aphid abundance.
-When the plant size was offset, the number of aphids less significantly differed between the wild type and mutant (Table SX). When the flowering time was offset, the number of aphids more significantly differed between the wild type and mutant (Table SX).
+When the plant size was offset, the number of aphids less significantly differed between the wild type and mutant (Table SX). 
+When the flowering time was offset, the number of aphids more significantly differed between the wild type and mutant (Table SX).
 These additional analyses support the observational evidence that delayed growth and flowering of the mutant plant results in less successful establishment of aphid colony than the wild type.  
 
 # Discussion
@@ -176,7 +181,7 @@ Multiple alleles on the AT3G13882 gene are also needed to provide strong evidenc
 In the studies of a ribosomal gene *REDUCED POLLEN NUMBER1* (*RDP1*), null mutants showed a pleiotropic effect on plant growth and pollen number in *A. thaliana* [@tsuchimatsu2020adaptive; @kakui2022pollen]. 
 Natural alleles of *RDP1* could alleviate pleiotropic growth defects [@tsuchimatsu2020adaptive]. 
 In our study, the other growth-related genes or other mutations of AT3G13882 might have reduced the aphid abundance. 
-Because transgenic approaches may not be effective to identify mutation sites affecting quantitative traits, natural alleles needs to be created using genomic editing first and then exchanged between natural accessions by crossing,
+Because transgenic approaches may not be effective to identify mutation sites affecting quantitative traits, natural alleles needs to be created using genome editing technology and then exchanged between natural accessions by crossing [@tsuchimatsu2020adaptive],
 Such quantitative complementation tests [@tsuchimatsu2020adaptive; @kakui2022pollen] will be needed to identify natural causal variants that alter aphid abundance through delayed growth.  
 
 Discovery of flowering-associated loci is sometimes of main interests in GWAS, but other times conceals net genetic effects on other complex traits of interests [@hori2012variation; @onogi2016uncovering]. 
