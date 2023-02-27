@@ -78,7 +78,7 @@ Since 38% of plants initiated bolting in the field (see Results), longer experim
 
 ### Data analysis  
 All GWAS analyses were performed using the GWA-portal (https://gwas.gmi.oeaw.ac.at) [@seren2018gwa]. 
-The imputed full-sequence dataset [@seren2018gwa] was used as SNP data for the 196 accessions, which provided combined SNP data imputed between 250k SNP chip genotyping by the RegMap project [@horton_genome-wide_2012] and high-throughput sequencing by the 1001 Genome Project [@alonso-blanco_1135_2016]
+The imputed full-sequence dataset [@seren2018gwa] was used as SNP data for the 196 accessions, which provided combined SNP data imputed between 250k SNP chip genotyping by the RegMap project [@horton_genome-wide_2012] and high-throughput sequencing by the 1001 Genome Project [@alonso-blanco_1135_2016].
 Pseudo-heritability $h^2$ [@seren2018gwa] was calculated for the target phenotype before association mapping. 
 Accelerated mixed models [@seren2018gwa] were used for association mapping with a correction of kinship structure.
 After the association mapping, candidate genes were searched within ca. 5 kb near a focal SNP. 
@@ -157,7 +157,7 @@ Our mapping also detected a significant SNP in an intergenic region above the ge
 This top-scoring SNP was also associated with the bolting to non-significant but strong extent (-log~10~(p)=5.26; Fig. [1](#fig:ManPlot){reference-type="ref"}c; Fig. [S4](#fig:qqplot){reference-type="ref"}b).
 Our GWAS of the bolting was comparable with GWAS of flowering time, because we found the same broad peak on the top of the fourth chromosome as reported by previous GWAS of flowering time [@aranzana_genome-wide_2005].
 The significance of Chr3-4579292 turned smaller but remained at -log~10~(p)=6.40 when we adjusted the effects of bolting on aphid abundance (Fig. [1](#fig:ManPlot){reference-type="ref"}d; Fig. [S4](#fig:qqplot){reference-type="ref"}c), indicating the partial contribution of the bolting to shaping the significant association between Chr3-4579292 SNP and aphid abundance.
-We did not find any other significant GWAS hits to Chr3-4579292 in GWAS HitMap database possibly because this rare variant might have been overlooked so far.
+We did not find any other significant GWAS hits to Chr3-4579292 in GWAS HitMap database [@togninalli_aragwas_2018] possibly because this rare variant might have been overlooked so far.
 The line of GWAS analyses suggests that the SNP at Chr3-4579292 was significantly associated with aphid abundance through its potential influence on flowering.  
 
 To narrow down candidate genes, we further focused on genomic region near the significant SNP at Chr3-4579292.
@@ -195,13 +195,13 @@ Multiple alleles on the AT3G13882 gene are thus needed to provide strong evidenc
 In the studies of a ribosomal gene *REDUCED POLLEN NUMBER1* (*RDP1*), null mutants showed a pleiotropic effect on plant growth and pollen number in *A. thaliana* [@tsuchimatsu2020adaptive; @kakui2022pollen]. 
 Natural alleles of *RDP1* could alleviate pleiotropic growth defects [@tsuchimatsu2020adaptive]. 
 In our study, the other growth-related genes or other mutations of AT3G13882 might have reduced the aphid abundance. 
-Because transgenic approaches may not be effective to identify mutation sites affecting quantitative traits, natural alleles needs to be created using genome editing technology and then exchanged between natural accessions by crossing [@tsuchimatsu2020adaptive],
+Because transgenic approaches may not be effective to identify mutation sites affecting quantitative traits, natural alleles need to be created using genome editing technology and then exchanged between natural accessions by crossing [@tsuchimatsu2020adaptive].
 Such quantitative complementation tests [@tsuchimatsu2020adaptive; @kakui2022pollen] will be needed to identify natural causal variants that alter aphid abundance through delayed growth.  
 
 Discovery of flowering-associated loci is sometimes of main interests in GWAS, but other times conceals net genetic effects on other complex traits of interests [@hori2012variation; @onogi2016uncovering]. 
 Our GWAS of aphid abundance unexpectedly led us to detect a significant rare variant that was also partially associated with the bolting.
 By correcting the plant size and flowering time as confounding factors, we were able to detect substantial contributions of plant apparency to aphid abundance.
-This finding does not necessarily indicates the irrelevance of chemical and physical defense traits to herbivore colonization.
+This finding does not indicate the irrelevance of chemical and physical defense traits to herbivore colonization.
 Although our top-scoring SNP did not match known GWAS peaks of glucosinolates [@brachi2015coselected], it was still possible that secondary metabolites and volatile-mediated defense signaling co-vary across plant ontogeny at phenotype levels.
 Such time-varying effects of plant traits on aphid colonization is difficult to evaluate using the short-lived annual *A. thaliana*.
 Further studies on long-lived plants besides the identification of natural causal variants would be needed to verify long-term impacts of a single plant gene on herbivory.  
