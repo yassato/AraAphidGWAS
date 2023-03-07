@@ -63,8 +63,10 @@ plot(jitter(subset(df,Date=="20180719")$aphid_wingless),
 
 dev.off()
 
+##################################
 # load output of GWA-portal
-# "log_BbLe_max_23338_pvals.csv" is available as a result of GWA-portal
+# please run GWA-portal beforehand
+# "log_BbLe_max_23338_pvals.csv.gz" and other csv files are available as a result of GWA-portal
 out = read.csv("./data/log_BbLe_max_23338_pvals.csv.gz",header=TRUE)
 nrow(out)
 
@@ -74,7 +76,7 @@ nrow(out)
 
 #########
 # plots
-library(gaston)
+library(gaston) #Note: this gaston package is used only for visualization
 
 # Manhattan plot
 png("./figures/log_BbLe_max_Man.png",width=6,height=3,res=600,units="in")
@@ -115,22 +117,21 @@ manplot("./data/BoltingAMM_42396_pvals.csv.gz") # bolting GWAS
 manplot("./data/resid_bolting_42399_pvals.csv.gz") # residuals of log_BbLe_max corrected by bolting
 dev.off()
 
-
-
+# QQ-plots
 png("./figures/supp_QQ.png",width=4,height=8,res=600,units="in")
 par(mai=c(1,1,0.25,0.25),mfrow=c(3,1),bg=NA)
 
 out = read.csv("./data/log_BbLe_max_23338_pvals.csv.gz",header=TRUE)
 out = out[out$maf>0.025,]
-gaston::qqplot.pvalues(p=10^(-out$score),las=1,main="")
+gaston::qqplot.pvalues(p=10^(-out$score),las=1,main="(a) Aphid abundance")
 
 out = read.csv("./data/BoltingAMM_42396_pvals.csv.gz",header=TRUE)
 out = out[out$maf>0.025,]
-gaston::qqplot.pvalues(p=10^(-out$score),las=1,main="")
+gaston::qqplot.pvalues(p=10^(-out$score),las=1,main="(b) Bolting")
 
 out = read.csv("./data/resid_bolting_42399_pvals.csv.gz",header=TRUE)
 out = out[out$maf>0.025,]
-gaston::qqplot.pvalues(p=10^(-out$score),las=1,main="")
+gaston::qqplot.pvalues(p=10^(-out$score),las=1,main="(c) Residuals")
 
 dev.off()
 

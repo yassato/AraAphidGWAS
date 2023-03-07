@@ -20,12 +20,12 @@ csl: proceedings-of-the-royal-society-b.csl
 
 # Abstract  
 Plant size, height, and other architectural traits, collectively called 'plant apparency', determine plant's visibility and consequent probability of being colonized by herbivores.
-Although plant genes involved in physical and chemical defense are well studied in herbivory, less is known about the genetic basis underlying effects of plant apparency on herbivore colonization. 
+Although plant genes involved in physical and chemical anti-herbivore defense are well studied, less is known about the genetic basis underlying effects of plant apparency on herbivore colonization. 
 Here, we conducted a genome-wide association study (GWAS) of aphid abundance in a field population of *Arabidopsis thaliana*. 
-This GWAS of aphid abundance detected a rare but significant SNP variant on the third chromosome of *A. thaliana*, which was also partly associated with the presence or absence of inflorescence. 
-Out of candidate genes near this significant SNP, a mutant of a ribosomal gene (AT3G13882) exhibited slower growth and later flowering than a wild type under laboratory conditions.
+This GWAS of aphid abundance detected a rare but significant variant on the third chromosome of *A. thaliana*, which was also partly associated with the presence or absence of inflorescence. 
+Out of candidate genes near this significant variant, a mutant of a ribosomal gene (AT3G13882) exhibited slower growth and later flowering than a wild type under laboratory conditions.
 A no-choice assay with the turnip aphid, _Lipaphis erysimi_, found that aphids were unable to successfully establish on the mutant.
-These findings suggest that genes relevant to plant apparency might underpin aphid colonization in the field.
+These findings suggest that genes relevant to plant apparency might underpin initial aphid colonization in the field.
 
 # Introduction
 Plants are attacked by herbivores across their life cycle in natural environments. 
@@ -154,15 +154,17 @@ This observation suggests that colonized aphids do not always establish a colony
 To reveal genetic architecture underlying variation in aphid abundance, we calculated heritability and then performed association mapping. 
 Aphid abundance had high heritability among the plant accessions ($h^2 = 0.7$), indicating the genetic control of this trait. 
 Our mapping also detected a significant SNP in an intergenic region above the genome-wide Bonferroni threshold (Chr3-4579292, $p<10^{-8}$,  MAF=0.026: Fig. [1](#fig:ManPlot){reference-type="ref"}b; see also Fig. [S4](#fig:qqplot){reference-type="ref"}a for quantile-quantile plots).
-This top-scoring SNP was also associated with the bolting to non-significant but strong extent (-log~10~(p)=5.26; Fig. [1](#fig:ManPlot){reference-type="ref"}c; Fig. [S4](#fig:qqplot){reference-type="ref"}b).
+This top-scoring SNP was also associated with the bolting to non-significant but strong extent (-log~10~($p$)=5.26; Fig. [1](#fig:ManPlot){reference-type="ref"}c; Fig. [S4](#fig:qqplot){reference-type="ref"}b).
 Our GWAS of the bolting was comparable with GWAS of flowering time, because we found the same broad peak on the top of the fourth chromosome as reported by previous GWAS of flowering time [@aranzana_genome-wide_2005].
-The significance of Chr3-4579292 turned smaller but remained at -log~10~(p)=6.40 when we adjusted the effects of bolting on aphid abundance (Fig. [1](#fig:ManPlot){reference-type="ref"}d; Fig. [S4](#fig:qqplot){reference-type="ref"}c), indicating the partial contribution of the bolting to shaping the significant association between Chr3-4579292 SNP and aphid abundance.
+The significance of Chr3-4579292 became weaker but remained at -log~10~($p$)=6.40 when we adjusted the effects of bolting on aphid abundance (Fig. [1](#fig:ManPlot){reference-type="ref"}d; Fig. [S4](#fig:qqplot){reference-type="ref"}c), indicating the partial contribution of the bolting to shaping the significant association between Chr3-4579292 SNP and aphid abundance.
+According to the SNP viewer of the GWA-portal [@seren2018gwa], the number of major and rare alleles was 1956 and 73 at Chr3-4579292 among all the 2029 accessions registered in the portal site, where the rare alleles were sporadically distributed among countries.
 We did not find any other significant GWAS hits to Chr3-4579292 in GWAS HitMap database [@togninalli_aragwas_2018] possibly because this rare variant might have been overlooked so far.
 The line of GWAS analyses suggests that the SNP at Chr3-4579292 was significantly associated with aphid abundance through its potential influence on flowering.  
 
 To narrow down candidate genes, we further focused on genomic region near the significant SNP at Chr3-4579292.
 Five out of the 196 accessions carried a rare allele increasing aphid abundance, while the other accessions have major alleles (Fig. [S5](#fig:database){reference-type="ref"}a).
 Genome sequences of four of the five rare accessions are available in the 1001 Genome Project [@alonso-blanco_1135_2016], where three of the four available accessions i.e., An-1, Kin-0, and Lm-2 shared similar patterns near Chr3-4579292 but differed from major accessions (Fig. [S5](#fig:database){reference-type="ref"}b).
+This additional evidence suggested that the association between the aphid abundance and rare alleles at Chr3-4579292 was not totally random.
 Three candidate genes were located nearest to this SNP at Chr3-4579292 (Fig. [1](#fig:ManPlot){reference-type="ref"}a), encompassing a putative ribosomal gene (AT3G13882) that is homologous to a ribosome protein L34 gene (RPL34) [@cheng2017araport11], *EPIDERMAL PATTERNING FACTOR LIKE 3* (*EPFL3*: AT3G13898), and *MYB26*. 
 Out of these three genes, the ribosomal gene (AT3G13882) is known to be highly expressed in vegetative organs such as leaves [@klepikova2016high]. 
 The other two genes, *EPFL3* and *MYB26*, are highly expressed only in reproductive organs such as anthers or pistils [@klepikova2016high]. 
@@ -170,12 +172,12 @@ Because aphids were unlikely to suck saps from anthers and pistils, we focused o
 
 ## Mutant plant growth and aphid colony establishment in the laboratory  
 To examine visible phenotypes of the ribosomal gene mutant (AT3G13882), we compared growth and flowering time of this mutant with the Col-0 wild type. 
-After 20 days of growth, the AT3G13882 mutant had a significantly smaller size than the wild type ($F_{1,9}=42.1, p=0.00011$: Fig. [2](#fig:mutant){reference-type="ref"}A,B). 
-The flowering time of the AT3G13882 mutant was also significantly later than the wild type ($F_{1,9}=48.8, p<0.0001$: Fig. [2](#fig:mutant){reference-type="ref"}A,C). 
+After 20 days of growth, the AT3G13882 mutant had a significantly smaller size than the wild type ($F_{1,9}=42.1, p=0.00011$: Fig. [2](#fig:mutant){reference-type="ref"}a and b). 
+The flowering time of the AT3G13882 mutant was also significantly later than the wild type ($F_{1,9}=48.8, p<0.0001$: Fig. [2](#fig:mutant){reference-type="ref"}a and c). 
 The slower growth and delayed flowering of the ribosomal gene mutant led us to test whether the delayed growth could prevent the establishment of aphid colonies after colonization.  
 
 Then, to examine colony establishment after aphid colonization, we released wingless individuals of *Lipaphis erysimi* on rosette plants of the ribosomal gene mutant (AT3G13882) and the wild type. 
-We observed a reduced number of aphids on the AT3G13882 mutant compared to the wild type at 7, 10, 14 days after the release of aphids ($F_{1,9}=19.3, p=0.0017$ at 7 days; Fig. [2](#fig:mutant){reference-type="ref"}D: see also Fig. [S6](#fig:aphid_stat){reference-type="ref"} for results at 10 and 14 days; Table S5), suggesting that the delayed growth of the host negatively affected aphid colony establishment.
+We observed a reduced number of aphids on the AT3G13882 mutant compared to the wild type at 7, 10, 14 days after the release of aphids ($F_{1,9}=19.3, p=0.0017$ at 7 days; Fig. [2](#fig:mutant){reference-type="ref"}d: see also Fig. [S6](#fig:aphid_stat){reference-type="ref"} for results at 10 and 14 days; Table S5), suggesting that the delayed growth of the host negatively affected aphid colony establishment.
 We also incorporated the plant size or flowering time as an offset term in GLMMs to examine their confounding influence on aphid abundance.
 When the plant size was offset, the number of aphids less significantly differed between the wild type and mutant ($F_{1,9}=6.9, p=0.027$ at 7 days: see also Table S5). 
 When the flowering time was offset, the number of aphids more significantly differed between the wild type and mutant ($F_{1,9}=40.78, p<0.001$ at 7 days: see also Table S5).
@@ -198,7 +200,7 @@ In our study, the other growth-related genes or other mutations of AT3G13882 mig
 Because transgenic approaches may not be effective to identify mutation sites affecting quantitative traits, natural alleles need to be created using genome editing technology and then exchanged between natural accessions by crossing [@tsuchimatsu2020adaptive].
 Such quantitative complementation tests [@tsuchimatsu2020adaptive; @kakui2022pollen] will be needed to identify natural causal variants that alter aphid abundance through delayed growth.  
 
-Discovery of flowering-associated loci is sometimes of main interests in GWAS, but other times conceals net genetic effects on other complex traits of interests [@hori2012variation; @onogi2016uncovering]. 
+Discovery of flowering-associated loci is sometimes of main interests in GWAS, but this may also conceal direct genetic associations between a focal locus and other complex traits of interests [@hori2012variation; @onogi2016uncovering]. 
 Our GWAS of aphid abundance unexpectedly led us to detect a significant rare variant that was also partially associated with the bolting.
 By correcting the plant size and flowering time as confounding factors, we were able to detect substantial contributions of plant apparency to aphid abundance.
 This finding does not indicate the irrelevance of chemical and physical defense traits to herbivore colonization.
@@ -231,9 +233,9 @@ This study was supported by the University of Zurich through the University Rese
 
 # Figures 
 
-![Figure 1. Genome-wide association study of aphid abundance on 196 *Arabidopsis thaliana* accessions grown in the field. (A) A genomic region within ca. 5 kbp from the top-scoring SNP at Chr3-4579292 displays the position of candidate genes. Only the longest splice variant (black horizontal arrow) is shown for each gene. (B-D) Manhattan plots show the association score of -log~10~($p$) for the aphid abundance (B), the presence of bolting (C), and the residuals of aphid abundance corrected by the bolting (D) across five chromosomes of *A. thaliana* with MAF cut-off at 0.025. A horizontal dashed line indicates the genome-wide Bonferroni threshold at $p=0.05$. A vertical red line highlights the position of Chr3-4579292. ](../figures/fig1_comb.pdf){#fig:ManPlot}  
+![Figure 1. Genome-wide association study of aphid abundance on 196 *Arabidopsis thaliana* accessions grown in the field. (a) A genomic region within ca. 5 kbp from the top-scoring SNP at Chr3-4579292 displays the position of candidate genes. Only the longest splice variant (black horizontal arrow) is shown for each gene. (b-d) Manhattan plots show the association score of -log~10~($p$) for the aphid abundance (b), the presence of bolting (c), and the residuals of aphid abundance corrected by the bolting (d) across five chromosomes of *A. thaliana* with MAF cut-off at 0.025. A horizontal dashed line indicates the genome-wide Bonferroni threshold at $p=0.05$. A vertical red line highlights the position of Chr3-4579292. ](../figures/fig1_comb.pdf){#fig:ManPlot}  
 
-![Figure 2. The photograph (A), plant size (B), flowering time (C), and aphid abundance (D) of the Col-0 wild type (WT) and the ribosomal gene mutant (AT3G13882) of *Arabidopsis thaliana* under laboratory conditions. Flowering time and aphid abundance represents the number of days to flowering and log~2~(no. of aphids + 1), respectively. Asterisks indicate the statistical significance by generalized linear mixed models; ** $p<0.01$; *** $p<0.001$; **** $p<0.001$. Boxes: median with upper and lower quartile; Whiskers: 1.5 $\times$ inter-quartile range.](../figures/mutant.png){#fig:mutant}  
+![Figure 2. The photograph (a), plant size (b), flowering time (c), and aphid abundance (d) of the Col-0 wild type (WT) and the ribosomal gene mutant (AT3G13882) of *Arabidopsis thaliana* under laboratory conditions. Flowering time and aphid abundance represents the number of days to flowering and log~2~(no. of aphids + 1), respectively. Asterisks indicate the statistical significance by generalized linear mixed models; ** $p<0.01$; *** $p<0.001$; **** $p<0.001$. Boxes: median with upper and lower quartile; Whiskers: 1.5 $\times$ inter-quartile range.](../figures/mutant.jpg){#fig:mutant}  
 
 
 # Supplementary Materials  
@@ -244,11 +246,11 @@ This study was supported by the University of Zurich through the University Rese
 
 ![Figure S3. Temporal patterns of the emergence of wingless and winged aphids during the field GWAS experiment. X-axes show the number of winged (top row) or wingless (bottom row) aphids at current monitoring day (t=year-month-day). Y-axes show the total number of both winged and wingless aphids at the next monitoring date (t+1). A single point corresponds to an individual plant. The number of aphids represents the total number of individuals of both *Lipaphis erysimi* and *Brevicoryne brassicae*.](../figures/aphid_No_per_day.png){#fig:aphid_day}  
 
-![Figure S4. A quantile-quantile (QQ) plot showing relationships between the observed and expected association score of -log~10~($p$) for the aphid abundance (top), the presence of bolting (middle), and the residuals of aphid abundance corrected by the bolting (bottom). A red solid line indicates randomly expected association scores abd the shaded area corresponds to its 95\% confidence intervals. The top figure shows that the top-scoring SNP at Chr3-4579292 is larger than the upper 95\% confidence interval.](../figures/supp_QQ.png){#fig:qqplot}
+![Figure S4. A quantile-quantile (QQ) plot showing relationships between the observed and expected association score of -log~10~($p$) for the aphid abundance (a), the presence of bolting (b), and the residuals of aphid abundance corrected by the bolting (c). A red solid line indicates randomly expected association scores abd the shaded area corresponds to its 95\% confidence intervals. The top figure shows that the top-scoring SNP at Chr3-4579292 is larger than the upper 95\% confidence interval.](../figures/supp_QQ.png){#fig:qqplot}
 
 ![Figure S5. Phenotype values (a) and amino acid sequences (b) focusing on the rare variant at Chr3-4579292. (a) The aphid abundance i.e., log(no. of aphids) between major and rare SNP alleles at Chr3-4579292. Bars indicates medians of the aphid abundance. (b) A comparison of amino acid sequences near Chr3-4579292 among accessions carrying rare or major alleles. Four accessions above the Col-0 sequence show those of the rare allele (highlighted by red squares), while accessions below the Col-0 show those of the lowest phenotypic values (highlited by blue squares). The panel (a) and (b) is depicted using the GWA-portal (<https://gwas.gmi.oeaw.ac.at/>) and 1001 Genome Browser (<http://signal.salk.edu/atg1001/3.0/gebrowser.php>), respectively.](../figures/database_snapshot.png){#fig:database}
 
-![Figure S6. Aphid abundance during the later period of incubation. Aphid abundance represents log~2~(no. of aphids + 1). Same as the result at 7 days (Fig. [2](#fig:mutant){reference-type="ref"}D), both the left and right panels have significant differences of the aphid abundance between the mutant (AT3G13882) and wild type (WT) ($F_{1,9}=56.96, p<10^{-4}$ for 10 days; $F_{1,9}=131.3, p<10^{-5}$ for 14 days).](../figures/aphid_last.pdf){#fig:aphid_last} 
+![Figure S6. Aphid abundance during the later period of incubation. Aphid abundance represents log~2~(no. of aphids + 1). Same as the result at 7 days (Fig. [2](#fig:mutant){reference-type="ref"}d), both the left and right panels have significant differences of the aphid abundance between the mutant (AT3G13882) and wild type (WT) ($F_{1,9}=56.96, p<10^{-4}$ for 10 days; $F_{1,9}=131.3, p<10^{-5}$ for 14 days).](../figures/aphid_last.pdf){#fig:aphid_last} 
 
 Table S1. List of GWAS accessions and phenotypes.  
 
