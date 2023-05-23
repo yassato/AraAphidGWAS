@@ -19,7 +19,7 @@ csl: proceedings-of-the-royal-society-b.csl
 ^\*^ *Co-correspondence; Y.S. (yasuhiro.sato@uzh.ch); K.K.S. (kentaro.shimizu@uzh.ch)*  
 
 Keywords: GWAS, Plant-Insect Interaction, Herbivory  
-Word count: 3470 (from the abstract to the end of the discussion)  
+Word count: 3738 (from the abstract to the end of the discussion)  
 
 # Abstract  
 Plant life-history traits, such as size and flowering, contribute to shaping variation in herbivore abundance. 
@@ -28,7 +28,7 @@ Here, we conducted a genome-wide association study (GWAS) of aphid abundance in 
 This GWAS of aphid abundance detected a relatively rare but significant variant on the third chromosome of _A. thaliana_, which was also suggestively but non-significantly associated with the presence or absence of inflorescence. 
 Out of candidate genes near this significant variant, a mutant of a ribosomal gene (AT3G13882) exhibited slower growth and later flowering than a wild type under laboratory conditions.
 A no-choice assay with the turnip aphid, _Lipaphis erysimi_, found that aphids were unable to successfully establish on the mutant.
-Our genome-wide association study of aphid abundance unexpectedly found a locus affecting plant growth and flowering in _A. thaliana_.  
+Our genome-wide association study of aphid abundance unexpectedly found a locus affecting plant growth and flowering.  
 
 # Introduction
 Plants are consumed by herbivores throughout their life cycles in natural environments.
@@ -127,7 +127,7 @@ Rosette diameter (cm) was recorded as an index of plant size before aphids were 
 
 To test whether aphids could establish a colony on the mutant plants, we released the turnip aphid _L. erysimi_ on the wild type and mutant _A. thaliana_ plants used in the growth experiment described above (Fig. [S3](#fig:timeline){reference-type="ref"}).
 The potted plants grown for 20 days were separately enclosed with a mesh net. 
-Five wingless adult female aphids were released on each plant.  
+Five wingless adult female aphids were released on each plant.
 The experimental aphids were derived from a source population established by a previous study [@barbour2022keystone].
 Enclosed plants were incubated under long-day conditions.
 The number of aphids per plant was counted by eye 3, 7, 10, and 14 days after the release of aphids. 
@@ -191,7 +191,7 @@ These additional analyses suggested that delayed growth rather than delayed flow
 However, the significant difference in aphid abundance between the wild type and mutant remained even after size or flowering was offset (Table S5), indicating the relevance of other traits to aphid colonisation.  
 
 # Discussion
-Guided by the field GWAS of aphid abundance, we found that a mutant plant exhibited slower growth and was less likely to harbour fewer aphids in _A. thaliana_.
+Guided by the field GWAS of aphid abundance, we found that a mutant plant exhibited slower growth and was less likely to harbour aphids in _A. thaliana_.
 While ribosomal genes have long been considered housekeeping genes of the protein synthesis machinery, mutants of ribosome-related genes exhibit a wide variety of growth and reproductive phenotypes. 
 For example, previous studies have reported a reduction in leaf cell number [@fujikura2009coordination], reduced root length [@creff2010two], and a reduction in the number of pollen [@tsuchimatsu2020adaptive; @kakui2022pollen] regarding ribosomal gene mutations. 
 We should note, however, that further studies on natural variants responsible for delayed growth and reduced aphid abundance are necessary to validate its importance in the field.
@@ -202,19 +202,19 @@ Natural alleles of *RDP1* can alleviate pleiotropic growth defects [@tsuchimatsu
 In our study, other growth-related genes or other mutations of AT3G13882 might have reduced aphid abundance. 
 Because transgenic approaches may not be effective to identify mutation sites affecting quantitative traits, further experimental tests, such as quantitative complementation and genome editing [@tsuchimatsu2020adaptive; @kakui2022pollen], are needed to study natural causal variants that alter aphid abundance through delayed growth.  
 
-In the present study, we found limited evidence for the beneficial roles of delayed growth in the escape from herbivores.
+In the present study, we found limited evidence for the beneficial roles of delayed growth in escape from herbivores.
 Despite the significant difference in the initial colonisation of aphids, two individuals with a mutation on the AT3G13882 gene were harboured by aphids in the laboratory (Fig. [2](#fig:mutant){reference-type="ref"}d). 
 The flowering time of these two individuals was not hindered (the initial plant size of 4.0 cm and 34 days until flowering in Fig. [2](#fig:mutant){reference-type="ref"}b and c), suggesting that aphid colonisation exerted little effect on plant reproduction. 
 The advantage of slower growth may be cancelled if aphids can successfully colonise slow-growth accessions in the later period and reach an abundance similar to that of fast-growing accessions.
 Although such long-term effects of aphid colonisation on plant fitness are difficult to evaluate using short-lived annual _A. thaliana_, this aspect could be tested with recurrent establishment of seasonal cohorts in _A. thaliana_ [@miryeganeh2018synchronisation]. 
 Further studies on fitness consequences, in addition to the identification of natural causal variants, are needed to test whether delayed growth is adaptive as an active strategy of plant defence.  
 
-Although our GWAS of aphid abundance unexpectedly detected a significant variant that was also suggestively but non-significantly associated with the bolting, these effects of the bolting on aphid abundance were not separable from other traits affecting herbivore abundance. 
+Although our GWAS of aphid abundance detected a significant variant that was also suggestively but non-significantly associated with the bolting, these effects of the bolting on aphid abundance were not separable from other traits affecting herbivore abundance. 
 In the field data, the significant SNP became non-significant but remained suggestive even after adjusting for the effects of the bolting on aphid abundance (Fig. [1](#fig:ManPlot){reference-type="ref"}d). 
 Laboratory experiments also showed that significant differences in aphid abundance between the wild type and mutant plants remained even after the effects of plant size or flowering were offset. 
 These results suggest the pleiotropic contributions of other traits to aphid abundance. 
 Specifically, we found fewer aphids on slow-growth mutants even under no-choice conditions in the laboratory (Fig. [2](#fig:mutant){reference-type="ref"}d), suggesting that traits co-varying with plant growth or flowering, such as plant nutritional values [@price1991plant] and secondary metabolites [@brachi2015coselected], were likely involved in the aphid colonisation. 
-Our results should thus be carefully interpreted with respect to other traits responsible for reduced aphid abundance.  
+Thus, our results should be carefully interpreted with respect to other traits responsible for reduced aphid abundance.  
 
 In summary, we found a novel quantitative trait locus related to plant growth and aphid abundance. 
 While previous field studies have illustrated _in natura_ roles of well-studied functional genes in chemical resistance (e.g., *LOX*s in *Nicotiana attenuata* [@kessler2004silencing; @schuman2015plant]) and physical resistance (*GLABRA1* in *A. thaliana* [@sato2019plant]) to herbivores, our GWAS of aphid abundance unexpectedly detected a locus related to plant growth rather than resistance. 
